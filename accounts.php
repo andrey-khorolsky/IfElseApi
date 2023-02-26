@@ -1,6 +1,7 @@
 <?php
 
 function getOneAccount($connect, $id){
+    //запрос в бд
     $accaount = mysqli_query($connect, "SELECT `id`, `firstName`, `lastName`, `email` FROM `accounts` WHERE `id` = '$id'");
 
     //неверный id - 400
@@ -32,7 +33,58 @@ function getOneAccount($connect, $id){
 }
 
 function getSearchAccount($connect){
-    if (isset($_GET["firstName"])) $firstName = $_GET["firstName"];
-    // $firstName = isset($_GET["firstName"]) ? $_GET["firstName"] : null;
-    die(var_dump($firstName));
+
+    //запрос и кол-во параметров
+    $query = "SELECT `id`, `firstName`, `lastName`, `email` FROM `accounts` WHERE ";
+    $first = false;
+
+    //переменные по дефолту
+    $firstName = $_GET['firstName'] ?? null;
+    $lastName = $_GET['lastName'] ?? null;
+    $email = $_GET['email'] ?? null;
+    $from = $_GET['from'] ?? 0;
+    $size = $_GET['size'] ?? 10;
+
+    //from < 0 || size <= 0 - 400
+    if ($from < 0 || $size <= 0){
+        http_response_code(400);
+        echo json_encode([
+            "status" => false,
+            "message" => "Bad request"
+        ]);
+        return;
+    }
+
+    //Неверные авторизационные данные - 401  ???????
+
+
+    //создание запроса в зависимости от реквеста
+    if (isset($firstName)){
+        $query .= "`firstName` LIKE '%$firstName%' ";
+        $first = true;
+    }
+    if (isset($lastName)){
+        if ($first) $query .= " AND ";
+        else $first = true;
+        $query .= "`lastName` LIKE '%$lastName%' ";
+    }
+    if (isset($email)){
+        if ($first) $query .= " AND ";
+        else $first = true;
+        $query .= "`email` LIKE '%$email%' ";
+    }
+
+    $postsList = [];
+    $searchAccounts = mysqli_query($connect, $query);
+
+    //пропускаем указанное кол-во элементов
+    for($i=0; $i++<$from; mysqli_fetch_assoc($searchAccounts));
+    
+    //вывод указаного кол-ва элементов
+    while ($post = mysqli_fetch_assoc($searchAccounts)){
+        $postsList[] = $post;
+        if (--$size === 0) break;
+    }
+
+    echo json_encode($postsList);
 }

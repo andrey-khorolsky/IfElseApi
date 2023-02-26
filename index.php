@@ -13,5 +13,6 @@ if (isset($params[0])) $id = $params[1];
 if ($page === "accounts"){
     if ($id === "search")
         getSearchAccount($connect);
+    else
     getOneAccount($connect, $id);
 }  
