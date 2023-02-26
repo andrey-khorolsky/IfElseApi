@@ -1,7 +1,5 @@
 <?php
 
-$connect = mysqli_connect("localhost", "root", "", "animal_chipization_db");
-
 function getOneAccount($connect, $id){
     $accaount = mysqli_query($connect, "SELECT `id`, `firstName`, `lastName`, `email` FROM `accounts` WHERE `id` = '$id'");
 

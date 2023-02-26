@@ -1,6 +1,7 @@
 <?php
 
-require("functions.php");
+require("database.php");
+require("accounts.php");
 
 header("Content-type: application/json");
 
