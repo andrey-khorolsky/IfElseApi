@@ -14,5 +14,10 @@ if ($page === "accounts"){
     if ($id === "search")
         getSearchAccount($connect);
     else
-    getOneAccount($connect, $id);
-}  
+        getOneAccount($connect, $id);
+} elseif ($page === "animals") {
+    if ($id === "search")
+        getSearchAnimals($connect);
+    else
+        getAnimalById($connect, $id);
+}
