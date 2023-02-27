@@ -2,6 +2,7 @@
 
 require("database.php");
 require("accounts.php");
+require("animals.php");
 
 header("Content-type: application/json");
 

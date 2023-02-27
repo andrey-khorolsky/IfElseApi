@@ -74,17 +74,17 @@ function getSearchAccount($connect){
         $query .= "`email` LIKE '%$email%' ";
     }
 
-    $postsList = [];
+    $accountList = [];
     $searchAccounts = mysqli_query($connect, $query);
 
     //пропускаем указанное кол-во элементов
     for($i=0; $i++<$from; mysqli_fetch_assoc($searchAccounts));
     
     //вывод указаного кол-ва элементов
-    while ($post = mysqli_fetch_assoc($searchAccounts)){
-        $postsList[] = $post;
+    while ($account = mysqli_fetch_assoc($searchAccounts)){
+        $accountList[] = $account;
         if (--$size === 0) break;
     }
 
-    echo json_encode($postsList);
+    echo json_encode($accountList);
 }
