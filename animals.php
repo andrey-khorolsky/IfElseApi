@@ -24,7 +24,7 @@ function getAnimalById($connect, $id){
 
         echo json_encode([
             "status" => false,
-            "message" => "Account not found"
+            "message" => "Animal not found"
         ]);
         return;
     }

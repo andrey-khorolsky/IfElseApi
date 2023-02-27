@@ -3,22 +3,28 @@
 require("database.php");
 require("accounts.php");
 require("animals.php");
+require("animal_type.php");
 
 header("Content-type: application/json");
 
 $q = $_GET["q"];
 $params = explode("/", $q);
-$page = $params[0];
-if (isset($params[0])) $id = $params[1];
+$page = [];
+for ($i = 0; $i < count($params); $i++){
+    $page[] = $params[$i];
+}
+// if (isset($params[count($params)]) && $params[count($params)] !== $page) $id = $params[count($params)];
 
-if ($page === "accounts"){
-    if ($id === "search")
+if ($page[0] === "accounts"){
+    if ($page[1] === "search")
         getSearchAccount($connect);
     else
-        getOneAccount($connect, $id);
-} elseif ($page === "animals") {
-    if ($id === "search")
+        getOneAccount($connect, $page[1]);
+} elseif ($page[0] === "animals") {
+    if ($page[1] === "types")
+        getAnimalTypeById($connect, $page[2]);
+    elseif ($page[1] === "search")
         getSearchAnimals($connect);
     else
-        getAnimalById($connect, $id);
+        getAnimalById($connect, $page[1]);
 }
