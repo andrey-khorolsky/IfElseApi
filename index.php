@@ -4,6 +4,7 @@ require("database.php");
 require("accounts.php");
 require("animals.php");
 require("animal_type.php");
+require("location.php");
 
 header("Content-type: application/json");
 
@@ -27,4 +28,6 @@ if ($page[0] === "accounts"){
         getSearchAnimals($connect);
     else
         getAnimalById($connect, $page[1]);
+} elseif ($page[0] === "locations"){
+    getLocationById($connect, $page[1]);
 }
