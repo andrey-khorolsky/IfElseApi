@@ -5,17 +5,25 @@ function getAnimalsType($connect, $animal){
     //берется id животного
     $id = $animal["id"];
     $typesList = [];
+    $locationsList = [];
 
     //запрос в бд о его типах
     $animal_types = mysqli_query($connect, "SELECT `id_type` FROM `animal_types` WHERE `id_animal` = '$id'");
+    $animal_locations = mysqli_query($connect, "SELECT `id_location` FROM `animal_locations` WHERE `id_animal` = '$id'");
     
-    //добавление в массив
+    //добавление типов в массив
     while ($type = mysqli_fetch_assoc($animal_types)){
         array_push($typesList, array_values($type));
     }
     $animal_types = ["animalTypes" => $typesList];
 
-    return array_merge(array_slice($animal, 0, 1), $animal_types, array_slice($animal, 1));
+    //добавление локаций в массив
+    while ($locations = mysqli_fetch_assoc($animal_locations)){
+        array_push($locationsList, array_values($locations));
+    }
+    $animal_locations = ["visitedLocations" => $locationsList];
+
+    return array_merge(array_slice($animal, 0, 1), $animal_types, array_slice($animal, 1, 8), $animal_locations, array_slice($animal, 8));
 }
 
 
