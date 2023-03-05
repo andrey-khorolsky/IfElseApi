@@ -1,11 +1,13 @@
 <?php
 
 require("database.php");
+require("authentication.php");
 require("accounts.php");
 require("animals.php");
 require("animal_type.php");
 require("location.php");
-require("errors.php");
+require("animal_visited_location.php");
+require("common_function.php");
 
 header("Content-type: application/json");
 
@@ -32,4 +34,6 @@ if ($page[0] === "accounts"){
         getAnimalById($connect, $page[1]);
 } elseif ($page[0] === "locations"){
     getLocationById($connect, $page[1]);
+} elseif ($page[0] === "registration") {
+    registrationAccount();
 }
