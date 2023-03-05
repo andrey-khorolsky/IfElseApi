@@ -1,17 +1,14 @@
 <?php
 
-function getOneAccount($connect, $id){
+
+//API 2.1: Получение информации об аккаунте пользователя
+function getAccountById($connect, $id){
     //запрос в бд
     $accaount = mysqli_query($connect, "SELECT `id`, `firstName`, `lastName`, `email` FROM `accounts` WHERE `id` = '$id'");
 
     //неверный id - 400
     if ($id <= 0 || $id == null){
-        http_response_code(400);
-
-        echo json_encode([
-            "status" => false,
-            "message" => "Incorrect id"
-        ]);
+        giveError(400, "Incorrect id");
         return;
     }
 
@@ -19,12 +16,7 @@ function getOneAccount($connect, $id){
 
     //аккаунт не найден - 404
     if (mysqli_num_rows($accaount) === 0){
-        http_response_code(404);
-
-        echo json_encode([
-            "status" => false,
-            "message" => "Account not found"
-        ]);
+        giveError(404, "Account not found");
         return;
     }
 
@@ -32,6 +24,7 @@ function getOneAccount($connect, $id){
     echo json_encode($accaount);
 }
 
+//API 2.2: Поиск аккаунтов пользователей по параметрам
 function getSearchAccount($connect){
 
     //запрос и кол-во параметров
@@ -47,11 +40,7 @@ function getSearchAccount($connect){
 
     //from < 0 || size <= 0 - 400
     if ($from < 0 || $size <= 0){
-        http_response_code(400);
-        echo json_encode([
-            "status" => false,
-            "message" => "Bad request"
-        ]);
+        giveError(400, "Bad request");
         return;
     }
 
