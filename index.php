@@ -25,7 +25,7 @@ if ($page[0] === "accounts"){
     else
         if ($method === "DELETE")
             deleteAccountById($connect, $page[1]);
-            else
+        elseif ($method === "GET")
             getAccountById($connect, $page[1]);
 } elseif ($page[0] === "animals") {
     if (isset($page[2]) && $page[2] === "locations")
@@ -37,7 +37,10 @@ if ($page[0] === "accounts"){
     else
         getAnimalById($connect, $page[1]);
 } elseif ($page[0] === "locations"){
-    getLocationById($connect, $page[1]);
+    if ($method === "DELETE")
+        deleteLocationById($connect, $page[1]);
+    elseif ($method === "GET")
+        getLocationById($connect, $page[1]);
 } elseif ($page[0] === "registration") {
     registrationAccount($connect);
 }
