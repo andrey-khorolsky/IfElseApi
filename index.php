@@ -35,5 +35,5 @@ if ($page[0] === "accounts"){
 } elseif ($page[0] === "locations"){
     getLocationById($connect, $page[1]);
 } elseif ($page[0] === "registration") {
-    registrationAccount();
+    registrationAccount($connect);
 }
