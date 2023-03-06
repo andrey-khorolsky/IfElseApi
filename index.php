@@ -11,6 +11,7 @@ require("common_function.php");
 
 header("Content-type: application/json");
 
+$method = $_SERVER["REQUES_METHOD"];
 $q = $_GET["q"];
 $params = explode("/", $q);
 $page = [];
@@ -22,7 +23,10 @@ if ($page[0] === "accounts"){
     if ($page[1] === "search")
         getSearchAccount($connect);
     else
-        getAccountById($connect, $page[1]);
+        if ($method === "DELETE")
+            deleteAccountById($connect, $page[1]);
+            else
+            getAccountById($connect, $page[1]);
 } elseif ($page[0] === "animals") {
     if (isset($page[2]) && $page[2] === "locations")
         getVisitedLocations($connect, $page[1]);
