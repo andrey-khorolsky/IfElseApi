@@ -101,7 +101,7 @@ function deleteAccountById($connect, $id){
 }
 
 
-//
+//API 2.3: Обновление данных аккаунта пользователя
 function updateAccount($connect, $id){
 
     $newData = file_get_contents("php://input");
@@ -114,7 +114,7 @@ function updateAccount($connect, $id){
 
     //accountId = null,
     // accountId <= 0 - 400
-    if (is_null($id) || $id <=0 || validData($firstName, $lastName, $email, $password)){
+    if (is_null($id) || $id <=0 || validData($firstName, $lastName, $password) || validEmail($email)){
         giveError(400, "Invalid data");
         return;
     }

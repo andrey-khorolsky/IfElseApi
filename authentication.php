@@ -9,7 +9,7 @@ function registrationAccount($connect){
     $password = $_POST["password"] ?? null;
     
     //валидация данных - 400
-    if (validData($firstName, $lastName, $email, $password)){
+    if (validData($firstName, $lastName, $password) || validEmail($email)){
         giveError(400, "Invalid data");
         return;
     }
