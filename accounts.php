@@ -12,7 +12,11 @@ function getAccountById($connect, $id){
         return;
     }
 
-    //Неверные авторизационные данные - 401  ???????
+    //Неверные авторизационные данные - 401
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
 
     //аккаунт не найден - 404
     if (mysqli_num_rows($accaount) === 0){
@@ -44,7 +48,11 @@ function getSearchAccount($connect){
         return;
     }
 
-    //Неверные авторизационные данные - 401  ???????
+    //Неверные авторизационные данные - 401
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
 
 
     //создание запроса в зависимости от реквеста
@@ -89,6 +97,10 @@ function deleteAccountById($connect, $id){
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
 
     // Удаление не своего акк, Аккаунт с таким accountId не найден - 403
     if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `id` = '$id'")) === 0){
@@ -121,6 +133,10 @@ function updateAccount($connect, $id){
 
 
     //Запрос от неавторизованного аккаунта, Неверные авторизационные данные - 401
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
 
     //Обновление не своего аккаунта, Аккаунт не найден - 403
     if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `email` = (SELECT `email` FROM `accounts` WHERE `id` = '$id')")) === 0){
@@ -134,7 +150,7 @@ function updateAccount($connect, $id){
         return;
     }
 
-    mysqli_query($connect, "UPDATE `accounts` SET `firstName` = '$firstName', `lastName` = '$lastName', `email` = '$email', `password` = '$password'");
+    mysqli_query($connect, "UPDATE `accounts` SET `firstName` = '$firstName', `lastName` = '$lastName', `email` = '$email', `password` = '$password' WHERE `id` = '$id'");
 
     echo json_encode([
         "id" => $id,

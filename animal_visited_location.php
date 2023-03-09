@@ -23,6 +23,12 @@ function getVisitedLocations($connect, $id){
         return;
     }
 
+    //Неверные авторизационные данные - 401
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
+    
     //аккаунт не найден - 404
     if (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = '$id'")) === 0){
         giveError(404, "Animal not found");

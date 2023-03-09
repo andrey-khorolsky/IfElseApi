@@ -15,6 +15,10 @@ function registrationAccount($connect){
     }
 
     //Запрос от авторизованного аккаунта - 403
+    if (!validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
 
     //Аккаунт с таким email уже существует - 409
     if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `email` = '$email'")) !== 0){

@@ -11,7 +11,11 @@ function getAnimalById($connect, $id){
         return;
     }
 
-    //Неверные авторизационные данные - 401  ???????
+    //Неверные авторизационные данные - 401
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
 
     //аккаунт не найден - 404
     if (mysqli_num_rows($animal) === 0){
@@ -57,7 +61,11 @@ function getSearchAnimals($connect){
         return;
     }
 
-    //Неверные авторизационные данные - 401  ???????
+    //Неверные авторизационные данные - 401
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
 
 
     //создание запроса в зависимости от реквеста

@@ -6,12 +6,16 @@ function getAnimalTypeById($connect, $id){
     $animal_types = mysqli_query($connect, "SELECT `id`, `type` FROM `types` WHERE `id` = '$id'");
 
     //$id <= 0 || $id == null  - 400
-    if ($id <= 0 || $id == null){
+    if ($id <= 0 || is_null($id)){
         giveError(400, "Incorrect id");
         return;
     }
 
-    //Неверные авторизационные данные - 401  ???????
+    //Неверные авторизационные данные - 401
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
 
     //аккаунт не найден - 404
     if (mysqli_num_rows($animal_types) === 0){

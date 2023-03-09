@@ -11,7 +11,11 @@ function getLocationById($connect, $id){
         return;
     }
 
-    //Неверные авторизационные данные - 401  ???????
+    //Неверные авторизационные данные - 401
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
 
     //аккаунт не найден - 404
     if (mysqli_num_rows($location) === 0){
@@ -21,28 +25,6 @@ function getLocationById($connect, $id){
 
     $location = mysqli_fetch_assoc($location);
     echo json_encode($location);
-}
-
-
-//API 3.4: Удаление точки локации животных
-function deleteLocationById($connect, $id){
-    
-    //pointId = null, pointId <= 0, Точка локации связана с животным - 400
-    if ($id == null || $id <=0 || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animals` WHERE `chippingLocationId` = '$id'")) !== 0){
-        giveError(400, "Invalid id");
-        return;
-    }
-
-    // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-
-    // Удаление не своего акк, Аккаунт с таким accountId не найден - 403
-    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `locations` WHERE `id` = '$id'")) === 0){
-        giveError(403, "Location not found");
-        return;
-    }
-
-    mysqli_query($connect, "DELETE FROM `locations` WHERE `id` = '$id'");
-
 }
 
 
@@ -58,6 +40,10 @@ function addLocation($connect){
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
 
     //Точка локации с такими latitude и longitude уже существует - 409
     if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `locations` WHERE `latitude` = '$latitude' AND `longitude` = '$longitude'")) !== 0){
@@ -73,4 +59,30 @@ function addLocation($connect){
         "latitude" => $latitude,
         "longitude" => $longitude
     ]);
+}
+
+
+//API 3.4: Удаление точки локации животных
+function deleteLocationById($connect, $id){
+    
+    //pointId = null, pointId <= 0, Точка локации связана с животным - 400
+    if ($id == null || $id <=0 || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animals` WHERE `chippingLocationId` = '$id'")) !== 0){
+        giveError(400, "Invalid id");
+        return;
+    }
+
+    // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
+
+    // Удаление не своего акк, Аккаунт с таким accountId не найден - 403
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `locations` WHERE `id` = '$id'")) === 0){
+        giveError(403, "Location not found");
+        return;
+    }
+
+    mysqli_query($connect, "DELETE FROM `locations` WHERE `id` = '$id'");
+
 }
