@@ -7,7 +7,7 @@ function getAccountById($connect, $id){
     $accaount = mysqli_query($connect, "SELECT `id`, `firstName`, `lastName`, `email` FROM `accounts` WHERE `id` = '$id'");
 
     //неверный id - 400
-    if ($id <= 0 || $id == null){
+    if ($id <= 0 || is_null($id)){
         giveError(400, "Incorrect id");
         return;
     }
@@ -83,7 +83,7 @@ function getSearchAccount($connect){
 function deleteAccountById($connect, $id){
 
     //accountId = null, accountId <= 0, Аккаунт связан с животным - 400
-    if ($id == null || $id <=0 || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animals` WHERE `chipperId` = '$id'")) !== 0){
+    if (is_null($id) || $id <=0 || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animals` WHERE `chipperId` = '$id'")) !== 0){
         giveError(400, "Invalid id");
         return;
     }
@@ -100,3 +100,46 @@ function deleteAccountById($connect, $id){
 
 }
 
+
+//
+function updateAccount($connect, $id){
+
+    $newData = file_get_contents("php://input");
+    $newData = json_decode($newData, true);
+
+    $firstName = $newData["firstName"];
+    $lastName = $newData["lastName"];
+    $email = $newData["email"];
+    $password = $newData["password"];
+
+    //accountId = null,
+    // accountId <= 0 - 400
+    if (is_null($id) || $id <=0 || validData($firstName, $lastName, $email, $password)){
+        giveError(400, "Invalid data");
+        return;
+    }
+
+
+    //Запрос от неавторизованного аккаунта, Неверные авторизационные данные - 401
+
+    //Обновление не своего аккаунта, Аккаунт не найден - 403
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `email` = (SELECT `email` FROM `accounts` WHERE `id` = '$id')")) === 0){
+        giveError(409, "Old account not found");
+        return;
+    }
+
+    //Аккаунт с таким email уже существует - 409
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `email` = '$email'")) !== 0){
+        giveError(409, "This email is used");
+        return;
+    }
+
+    mysqli_query($connect, "UPDATE `accounts` SET `firstName` = '$firstName', `lastName` = '$lastName', `email` = '$email', `password` = '$password'");
+
+    echo json_encode([
+        "id" => $id,
+        "firstName" => $firstName,
+        "lastName" => $lastName,
+        "email" => $email
+    ]);
+}

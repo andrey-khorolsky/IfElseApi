@@ -3,8 +3,13 @@
 //API 1.1: Регистрация нового аккаунта
 function registrationAccount($connect){
 
+    $firstName = $_POST["firstName"] ?? null;
+    $lastName = $_POST["lastName"] ?? null;
+    $email = $_POST["email"] ?? null;
+    $password = $_POST["password"] ?? null;
+    
     //валидация данных - 400
-    if (validData()){
+    if (validData($firstName, $lastName, $email, $password)){
         giveError(400, "Invalid data");
         return;
     }
@@ -12,15 +17,11 @@ function registrationAccount($connect){
     //Запрос от авторизованного аккаунта - 403
 
     //Аккаунт с таким email уже существует - 409
-    $email = $_POST["email"] ?? null;
     if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `email` = '$email'")) !== 0){
         giveError(409, "This email is used");
         return;
     }
 
-    $firstName = $_POST["firstName"] ?? null;
-    $lastName = $_POST["lastName"] ?? null;
-    $password = $_POST["password"] ?? null;
 
     mysqli_query($connect, "INSERT INTO `accounts` (`id`, `firstName`, `lastName`, `email`, `password`) VALUES (null, '$firstName', '$lastName', '$email', '$password')");
 
@@ -33,14 +34,3 @@ function registrationAccount($connect){
     ]);
 }
 
-
-//валидация данных. all right -> false
-function validData(){
-    if (!isset($_POST["firstName"], $_POST["lastName"], $_POST["email"], $_POST["password"])) return true;
-    if (trim($_POST["firstName"]) === "" || trim($_POST["lastName"]) === "" || trim($_POST["email"]) === "" || trim($_POST["password"]) === "") return true;
-
-    $reg = "/^([a-zA-Z0-9]+[a-zA-Z0-9._-]+[a-zA-Z0-9]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,})$/";
-    if (preg_match($reg, $_POST["email"]) !== 1) return true;
-    
-    return false;
-}
