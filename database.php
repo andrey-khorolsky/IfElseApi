@@ -1,3 +1,3 @@
 <?php
 
-$connect = mysqli_connect("localhost", "root", "", "animal_chipization_db");
+$connect = mysqli_connect("localhost", "root", "123", "chipization");
