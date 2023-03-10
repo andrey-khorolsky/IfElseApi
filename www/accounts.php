@@ -93,32 +93,6 @@ function getSearchAccount($connect){
 }
 
 
-//API 2.4: Удаление аккаунта пользователя
-function deleteAccountById($connect, $id){
-
-    //accountId = null, accountId <= 0, Аккаунт связан с животным - 400
-    if (is_null($id) || $id <=0 || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animals` WHERE `chipperId` = '$id'")) !== 0){
-        giveError(400, "Invalid id");
-        return;
-    }
-
-    // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-    if (notAuthorize() || validAuthorize($connect)){
-        giveError(401, "Authorization error");
-        return;
-    }
-
-    // Удаление не своего акк, Аккаунт с таким accountId не найден - 403
-    if (notYourAccount($connect, $id) || (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `id` = '$id'")) === 0)){
-        giveError(403, "Account not found");
-        return;
-    }
-
-    mysqli_query($connect, "DELETE FROM `accounts` WHERE `id` = '$id'");
-
-}
-
-
 //API 2.3: Обновление данных аккаунта пользователя
 function updateAccount($connect, $id){
 
@@ -164,4 +138,30 @@ function updateAccount($connect, $id){
         "lastName" => $lastName,
         "email" => $email
     ]);
+}
+
+
+//API 2.4: Удаление аккаунта пользователя
+function deleteAccountById($connect, $id){
+
+    //accountId = null, accountId <= 0, Аккаунт связан с животным - 400
+    if (is_null($id) || $id <=0 || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animals` WHERE `chipperId` = '$id'")) !== 0){
+        giveError(400, "Invalid id");
+        return;
+    }
+
+    // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
+    if (notAuthorize() || validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
+
+    // Удаление не своего акк, Аккаунт с таким accountId не найден - 403
+    if (notYourAccount($connect, $id) || (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `id` = '$id'")) === 0)){
+        giveError(403, "Account not found");
+        return;
+    }
+
+    mysqli_query($connect, "DELETE FROM `accounts` WHERE `id` = '$id'");
+
 }

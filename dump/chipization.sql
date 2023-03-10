@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 09 2023 г., 01:12
+-- Время создания: Мар 10 2023 г., 21:37
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -44,7 +44,8 @@ INSERT INTO `accounts` (`id`, `firstName`, `lastName`, `email`, `password`) VALU
 (2, 'Egor', 'Yakovenko', 'superegor@mail.mail', 'egoregor12'),
 (3, 'Niko', 'Ershov', 'ershov@mail.mail', 'ershov'),
 (4, 'Alexey', 'Alexandrov', 'alex@mail.mail', 'alexalex'),
-(5, 'Evgeniy', 'Evgeniev', 'evgeniy@mail.mail', 'evgeniy123');
+(5, 'Sergei', 'Sergeev', 'sergei@mail.mail', 'ser123'),
+(8, 'Admin', 'AlsoAdmin', 'admin@mail.ru', 'admin');
 
 -- --------------------------------------------------------
 
@@ -53,7 +54,7 @@ INSERT INTO `accounts` (`id`, `firstName`, `lastName`, `email`, `password`) VALU
 --
 
 CREATE TABLE `animals` (
-  `id` int NOT NULL,
+  `id` bigint NOT NULL,
   `weight` float NOT NULL,
   `length` float NOT NULL,
   `height` float NOT NULL,
@@ -61,7 +62,7 @@ CREATE TABLE `animals` (
   `lifeStatus` varchar(5) NOT NULL DEFAULT 'ALIVE',
   `chippingDateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `chipperId` int NOT NULL,
-  `chippingLocationId` double NOT NULL,
+  `chippingLocationId` bigint NOT NULL,
   `deathDateTime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -81,9 +82,9 @@ INSERT INTO `animals` (`id`, `weight`, `length`, `height`, `gender`, `lifeStatus
 --
 
 CREATE TABLE `animal_locations` (
-  `id` double NOT NULL,
-  `id_animal` int NOT NULL,
-  `id_location` double NOT NULL,
+  `id` bigint NOT NULL,
+  `id_animal` bigint NOT NULL,
+  `id_location` bigint NOT NULL,
   `dateTimeOfVisitLocationPoint` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -105,8 +106,8 @@ INSERT INTO `animal_locations` (`id`, `id_animal`, `id_location`, `dateTimeOfVis
 --
 
 CREATE TABLE `animal_types` (
-  `id_animal` int NOT NULL,
-  `id_type` int NOT NULL
+  `id_animal` bigint NOT NULL,
+  `id_type` bigint NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -125,7 +126,7 @@ INSERT INTO `animal_types` (`id_animal`, `id_type`) VALUES
 --
 
 CREATE TABLE `locations` (
-  `id` double NOT NULL,
+  `id` bigint NOT NULL,
   `latitude` double NOT NULL,
   `longitude` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -135,9 +136,10 @@ CREATE TABLE `locations` (
 --
 
 INSERT INTO `locations` (`id`, `latitude`, `longitude`) VALUES
-(1, 901234, 123123),
-(2, 678667, 678687),
-(3, 890890, 689898);
+(1, 89, 12),
+(2, 67, 67),
+(3, 89, 68),
+(4, 56, 28);
 
 -- --------------------------------------------------------
 
@@ -146,7 +148,7 @@ INSERT INTO `locations` (`id`, `latitude`, `longitude`) VALUES
 --
 
 CREATE TABLE `types` (
-  `id` int NOT NULL,
+  `id` bigint NOT NULL,
   `type` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -215,31 +217,31 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT для таблицы `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `animals`
 --
 ALTER TABLE `animals`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `animal_locations`
 --
 ALTER TABLE `animal_locations`
-  MODIFY `id` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `locations`
 --
 ALTER TABLE `locations`
-  MODIFY `id` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `types`
 --
 ALTER TABLE `types`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -250,21 +252,21 @@ ALTER TABLE `types`
 --
 ALTER TABLE `animals`
   ADD CONSTRAINT `animals_ibfk_1` FOREIGN KEY (`chipperId`) REFERENCES `accounts` (`id`),
-  ADD CONSTRAINT `animals_ibfk_2` FOREIGN KEY (`chippingLocationId`) REFERENCES `locations` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `animals_ibfk_2` FOREIGN KEY (`chippingLocationId`) REFERENCES `locations` (`id`);
 
 --
 -- Ограничения внешнего ключа таблицы `animal_locations`
 --
 ALTER TABLE `animal_locations`
-  ADD CONSTRAINT `animal_locations_ibfk_1` FOREIGN KEY (`id_animal`) REFERENCES `animals` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `animal_locations_ibfk_2` FOREIGN KEY (`id_location`) REFERENCES `locations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `animal_locations_ibfk_1` FOREIGN KEY (`id_location`) REFERENCES `locations` (`id`),
+  ADD CONSTRAINT `animal_locations_ibfk_2` FOREIGN KEY (`id_animal`) REFERENCES `animals` (`id`);
 
 --
 -- Ограничения внешнего ключа таблицы `animal_types`
 --
 ALTER TABLE `animal_types`
-  ADD CONSTRAINT `animal_types_ibfk_1` FOREIGN KEY (`id_animal`) REFERENCES `animals` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `animal_types_ibfk_2` FOREIGN KEY (`id_type`) REFERENCES `types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `animal_types_ibfk_1` FOREIGN KEY (`id_animal`) REFERENCES `animals` (`id`),
+  ADD CONSTRAINT `animal_types_ibfk_2` FOREIGN KEY (`id_type`) REFERENCES `types` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

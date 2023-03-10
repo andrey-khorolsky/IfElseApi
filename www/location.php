@@ -34,6 +34,7 @@ function addLocation($connect){
     $latitude = $_POST["latitude"] ?? null;
     $longitude = $_POST["longitude"] ?? null;
 
+    //невалидные координаты 
     if (validCoordinates($latitude, $longitude)){
         giveError(400, "Invalid coord");
         return;
@@ -47,7 +48,7 @@ function addLocation($connect){
 
     //Точка локации с такими latitude и longitude уже существует - 409
     if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `locations` WHERE `latitude` = '$latitude' AND `longitude` = '$longitude'")) !== 0){
-        giveError(403, "Location is existed");
+        giveError(409, "Location is existed");
         return;
     }
 
@@ -87,5 +88,44 @@ function deleteLocationById($connect, $id){
 
 }
 
-//
+//API 3.3: Изменение точки локации животных
+function changeLocation($connect, $id){
+    $newData = file_get_contents("php://input");
+    $newData = json_decode($newData, true);
 
+    $latitude = $newData["latitude"];
+    $longitude = $newData["longitude"];
+
+    //невалидный id или координаты 
+    if (is_null($id) || $id <= 0 || validCoordinates($latitude, $longitude)){
+        giveError(400, "Invalid data");
+        return;
+    }
+
+    // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
+    if (notAuthorize() || validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
+
+    // Точка локации с таким pointId не найдена - 404
+    if ((mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `locations` WHERE `id` = '$id'")) === 0)){
+        giveError(404, "Location not found");
+        return;
+    }
+
+    //Точка локации с такими latitude и longitude уже существует - 409
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `locations` WHERE `latitude` = '$latitude' AND `longitude` = '$longitude'")) !== 0){
+        giveError(409, "Location is existed");
+        return;
+    }
+
+    mysqli_query($connect, "UPDATE `accounts` SET `latitude` = '$latitude', `longitude` = '$longitude' WHERE `id` = '$id'");
+
+
+    echo json_encode([
+        "id" => mysqli_insert_id($connect),
+        "latitude" => $latitude,
+        "longitude" => $longitude
+    ]);
+}

@@ -46,6 +46,8 @@ if ($page[0] === "accounts"){
         getLocationById($connect, $page[1]);
     elseif ($method === "POST")
         addLocation($connect);
+    elseif ($method === "PUT")
+        changeLocation($connect, $page[1]);
 } elseif ($page[0] === "registration") {
     registrationAccount($connect);
 }
