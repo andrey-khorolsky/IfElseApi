@@ -1,0 +1,272 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Хост: 127.0.0.1:3306
+-- Время создания: Мар 09 2023 г., 01:12
+-- Версия сервера: 8.0.30
+-- Версия PHP: 8.1.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- База данных: `chipization`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `accounts`
+--
+
+CREATE TABLE `accounts` (
+  `id` int NOT NULL,
+  `firstName` varchar(50) NOT NULL,
+  `lastName` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `accounts`
+--
+
+INSERT INTO `accounts` (`id`, `firstName`, `lastName`, `email`, `password`) VALUES
+(1, 'Nikolai', 'Petrov', 'emailemail@mail.mail', '123465qwe'),
+(2, 'Egor', 'Yakovenko', 'superegor@mail.mail', 'egoregor12'),
+(3, 'Niko', 'Ershov', 'ershov@mail.mail', 'ershov'),
+(4, 'Alexey', 'Alexandrov', 'alex@mail.mail', 'alexalex'),
+(5, 'Evgeniy', 'Evgeniev', 'evgeniy@mail.mail', 'evgeniy123');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `animals`
+--
+
+CREATE TABLE `animals` (
+  `id` int NOT NULL,
+  `weight` float NOT NULL,
+  `length` float NOT NULL,
+  `height` float NOT NULL,
+  `gender` text NOT NULL,
+  `lifeStatus` varchar(5) NOT NULL DEFAULT 'ALIVE',
+  `chippingDateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `chipperId` int NOT NULL,
+  `chippingLocationId` double NOT NULL,
+  `deathDateTime` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `animals`
+--
+
+INSERT INTO `animals` (`id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime`) VALUES
+(1, 30, 0.7, 0.6, 'MALE', 'ALIVE', '2023-02-26 22:20:42', 1, 1, '2023-02-26 22:25:37'),
+(2, 40, 0.87, 0.9, 'FEMALE', 'ALIVE', '2023-02-26 22:36:38', 2, 2, NULL),
+(3, 120, 3.45, 0.14, 'MALE', 'ALIVE', '2023-02-26 22:38:27', 3, 3, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `animal_locations`
+--
+
+CREATE TABLE `animal_locations` (
+  `id` double NOT NULL,
+  `id_animal` int NOT NULL,
+  `id_location` double NOT NULL,
+  `dateTimeOfVisitLocationPoint` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `animal_locations`
+--
+
+INSERT INTO `animal_locations` (`id`, `id_animal`, `id_location`, `dateTimeOfVisitLocationPoint`) VALUES
+(1, 1, 1, '2023-03-01 10:40:16'),
+(2, 1, 3, '2023-03-01 10:40:30'),
+(3, 2, 1, '2023-03-01 10:35:30'),
+(4, 2, 3, '2023-03-01 10:50:00'),
+(5, 3, 1, '2023-03-01 10:45:16');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `animal_types`
+--
+
+CREATE TABLE `animal_types` (
+  `id_animal` int NOT NULL,
+  `id_type` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `animal_types`
+--
+
+INSERT INTO `animal_types` (`id_animal`, `id_type`) VALUES
+(1, 1),
+(1, 6),
+(3, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `locations`
+--
+
+CREATE TABLE `locations` (
+  `id` double NOT NULL,
+  `latitude` double NOT NULL,
+  `longitude` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `locations`
+--
+
+INSERT INTO `locations` (`id`, `latitude`, `longitude`) VALUES
+(1, 901234, 123123),
+(2, 678667, 678687),
+(3, 890890, 689898);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `types`
+--
+
+CREATE TABLE `types` (
+  `id` int NOT NULL,
+  `type` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `types`
+--
+
+INSERT INTO `types` (`id`, `type`) VALUES
+(1, 'dog'),
+(2, 'snake'),
+(3, 'cat'),
+(4, 'bird'),
+(5, 'insect'),
+(6, 'four legs');
+
+--
+-- Индексы сохранённых таблиц
+--
+
+--
+-- Индексы таблицы `accounts`
+--
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `animals`
+--
+ALTER TABLE `animals`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `chipperId` (`chipperId`) USING BTREE,
+  ADD KEY `chippingLocationId` (`chippingLocationId`);
+
+--
+-- Индексы таблицы `animal_locations`
+--
+ALTER TABLE `animal_locations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_animal` (`id_animal`),
+  ADD KEY `id_location` (`id_location`);
+
+--
+-- Индексы таблицы `animal_types`
+--
+ALTER TABLE `animal_types`
+  ADD KEY `id_animal` (`id_animal`,`id_type`),
+  ADD KEY `id_type` (`id_type`);
+
+--
+-- Индексы таблицы `locations`
+--
+ALTER TABLE `locations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `types`
+--
+ALTER TABLE `types`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `accounts`
+--
+ALTER TABLE `accounts`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT для таблицы `animals`
+--
+ALTER TABLE `animals`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT для таблицы `animal_locations`
+--
+ALTER TABLE `animal_locations`
+  MODIFY `id` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT для таблицы `locations`
+--
+ALTER TABLE `locations`
+  MODIFY `id` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT для таблицы `types`
+--
+ALTER TABLE `types`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Ограничения внешнего ключа сохраненных таблиц
+--
+
+--
+-- Ограничения внешнего ключа таблицы `animals`
+--
+ALTER TABLE `animals`
+  ADD CONSTRAINT `animals_ibfk_1` FOREIGN KEY (`chipperId`) REFERENCES `accounts` (`id`),
+  ADD CONSTRAINT `animals_ibfk_2` FOREIGN KEY (`chippingLocationId`) REFERENCES `locations` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Ограничения внешнего ключа таблицы `animal_locations`
+--
+ALTER TABLE `animal_locations`
+  ADD CONSTRAINT `animal_locations_ibfk_1` FOREIGN KEY (`id_animal`) REFERENCES `animals` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `animal_locations_ibfk_2` FOREIGN KEY (`id_location`) REFERENCES `locations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `animal_types`
+--
+ALTER TABLE `animal_types`
+  ADD CONSTRAINT `animal_types_ibfk_1` FOREIGN KEY (`id_animal`) REFERENCES `animals` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `animal_types_ibfk_2` FOREIGN KEY (`id_type`) REFERENCES `types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

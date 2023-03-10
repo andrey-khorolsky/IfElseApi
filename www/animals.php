@@ -140,4 +140,3 @@ function getAnimalsType($connect, $animal){
 
     return array_merge(array_slice($animal, 0, 1), $animal_types, array_slice($animal, 1, 8), $animal_locations, array_slice($animal, 8));
 }
-

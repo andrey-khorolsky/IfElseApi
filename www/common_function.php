@@ -53,13 +53,37 @@ function validCoordinates($latitude, $longitude){
 //проверка авторизационных данных. all right -> false
 function validAuthorize($connect){
     
-    if (is_null($authorization = getallheaders()["Authorization"] ?? null)) return true;
+    if (is_null($authorization = getallheaders()["Authorization"] ?? null)) return false;
+
+    $authorization = substr($authorization, stripos($authorization, " ")+1); //login:pass (in base64)
+    $authorization = base64_decode($authorization);  //login:pass (in unicode)
     
-    $authorization = substr($authorization, stripos($authorization, " ")+1);  //login:pass
-    $login = base64_decode(substr($authorization, 0, stripos($authorization, ":")));  //login
-    $pass = base64_decode(substr($authorization, stripos($authorization, ":")+1));  //password
+    $login = substr($authorization, 0, stripos($authorization, ":"));  //login
+    $pass = substr($authorization, stripos($authorization, ":")+1);  //password
 
     if (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `accounts` WHERE `email` = '$login' AND `password` = '$pass'")) !== 1){
+        return true;
+    }
+    return false;
+}
+
+//проверка авторизации. all right -> false
+function notAuthorize(){
+    if (isset(getallheaders()["Authorization"])) return false;
+    return true;
+}
+
+//проверка на доступ к чужему аккаунту. all right -> false
+function notYourAccount($connect, $id){
+    $acc = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `email`, `password` FROM `accounts` WHERE `id` = '$id'"));
+
+    $authorization = getallheaders()["Authorization"];
+    $authorization = substr($authorization, stripos($authorization, " ")+1); //login:pass (in base64)
+    $authorization = base64_decode($authorization);  //login:pass (in unicode)
+    $login = substr($authorization, 0, stripos($authorization, ":"));  //login
+    $pass = substr($authorization, stripos($authorization, ":")+1);  //password
+
+    if (($acc["email"] !== $login) || ($acc["password"] !== $pass)){
         return true;
     }
     return false;

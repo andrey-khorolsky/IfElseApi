@@ -1,0 +1,51 @@
+version: "3"
+services:
+    php:
+        build: .
+        ports: 
+            - "8080:80"
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_PASSWORD=123
+            - MYSQL_ROOT_PASSWORD=123
+            - MYSQL_DATABASE=chipization
+        volumes:
+            - ./www:/var/www/html
+        links:
+            - db
+        networks:
+            - default
+
+    db:
+        build:
+            context: ./dump
+        restart: always
+        command: --default-authentication-plugin=mysql_native_password
+        ports: 
+            - "3306:3306"
+        environment:
+            - MYSQL_DATABASE=chipization
+            - MYSQL_ROOT_PASSWORD=123
+        volumes:
+            - ./dump:/docker-entrypoint-initdb.d
+            - ./conf:/etc/mysql/conf.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+
+    # Сервис для разворачивания контейнера с автотестами
+    tests:
+        image: mrexpen/planet_olymp_phase1
+        pull_policy: always
+        ports:
+            - "8090:8080"
+        depends_on:
+            - php
+        environment:
+            SERVER_URL: http://php:80
+            STAGE: all
+    # all - запуск всех тестов из трёх доступных этапов
+    # 0, 1 или 2 - запуск тестов для соответствующего этапа
+
+volumes:
+    persistent:

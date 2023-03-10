@@ -40,7 +40,7 @@ function addLocation($connect){
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (notAuthorize() || validAuthorize($connect)){
         giveError(401, "Authorization error");
         return;
     }
@@ -66,23 +66,26 @@ function addLocation($connect){
 function deleteLocationById($connect, $id){
     
     //pointId = null, pointId <= 0, Точка локации связана с животным - 400
-    if ($id == null || $id <=0 || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animals` WHERE `chippingLocationId` = '$id'")) !== 0){
+    if (is_null($id) || $id <=0 || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animals` WHERE `chippingLocationId` = '$id'")) !== 0){
         giveError(400, "Invalid id");
         return;
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (notAuthorize() || validAuthorize($connect)){
         giveError(401, "Authorization error");
         return;
     }
 
-    // Удаление не своего акк, Аккаунт с таким accountId не найден - 403
-    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `locations` WHERE `id` = '$id'")) === 0){
-        giveError(403, "Location not found");
+    // Точка локации с таким pointId не найдена - 404
+    if ((mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `locations` WHERE `id` = '$id'")) === 0)){
+        giveError(404, "Location not found");
         return;
     }
 
     mysqli_query($connect, "DELETE FROM `locations` WHERE `id` = '$id'");
 
 }
+
+//
+

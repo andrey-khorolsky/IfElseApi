@@ -1,0 +1,867 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 13:48:01.636188 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 13:48:01.636815 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 13:48:50.247771 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 13:58:22.057279 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 13:58:22.057743 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 13:59:13.452729 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 14:00:01.841107 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 14:00:01.841570 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 14:00:43.788813 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 14:03:30.271868 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 14:03:30.272424 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 14:09:20.884471 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 14:09:55.115745 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 14:09:55.116179 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 14:10:35.359944 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 14:10:45.298348 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 14:10:45.298841 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 14:11:55.861058 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 14:17:04.229262 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 14:17:04.229722 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 14:19:29.271024 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 14:20:51.501419 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 14:20:51.502087 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 14:34:55.355189 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 14:34:58.508784 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 14:34:58.509226 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 14:39:17.673739 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 14:45:54.287929 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 14:45:54.288678 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 14:53:44.278587 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 14:56:57.638334 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 14:56:57.639085 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 14:57:03.660279 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 14:57:21.741244 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 14:57:21.741728 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 14:57:58.884094 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 14:59:56.649389 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 14:59:56.649885 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 15:00:18.266597 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 15:00:44.300355 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 15:00:44.300915 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 15:00:54.303300 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 15:01:06.556859 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 15:01:06.557433 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 15:03:31.638175 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 15:03:56.903571 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 15:03:56.904311 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 15:04:05.153231 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 15:04:24.469814 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 15:04:24.470270 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 15:08:12.558042 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.22.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 15:09:24.733543 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 15:09:24.734143 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 15:10:47.011970 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.22.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 22:06:04.607970 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 22:06:04.609013 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 22:07:59.497674 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 22:13:52.542939 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 22:13:52.543874 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 22:14:22.330075 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 22:15:33.858656 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 22:15:33.859730 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 22:17:14.979567 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 22:17:29.613986 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 22:17:29.614832 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 22:19:39.540160 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 22:20:53.574961 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 22:20:53.575714 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 22:22:50.831798 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 22:22:56.302991 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 22:22:56.303915 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 22:26:16.421254 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 22:26:24.759401 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 22:26:24.760351 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 22:26:44.046625 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 22:26:54.856263 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 22:26:54.857107 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 22:27:08.899726 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 22:27:34.491958 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 22:27:34.492978 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 22:29:36.234656 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 22:29:50.311199 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 22:29:50.312268 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 22:30:22.834277 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 08 22:31:10.789650 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Wed Mar 08 22:31:10.790706 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 08 22:31:45.299071 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 08:56:00.526998 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 08:56:00.527997 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 08:58:21.347462 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 08:58:35.419048 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 08:58:35.419790 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 09:09:10.902958 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 09:13:45.232213 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 09:13:45.232980 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 09:17:10.724033 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 09:28:13.527952 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 09:28:13.528673 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 09:35:33.071017 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 09:35:41.871356 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 09:35:41.872286 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 09:58:41.009129 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 09:58:41.010107 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 10:00:28.137336 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 10:05:34.384921 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 10:05:34.386014 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 10:10:09.266424 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 10:10:25.644762 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 10:10:25.645585 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 10:13:13.275614 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 14:44:37.627932 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 14:44:37.628388 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 14:45:26.332034 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 14:46:28.275810 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 14:46:28.276274 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 14:48:48.489474 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 14:50:00.800288 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 14:50:00.800980 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 14:50:47.513215 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 14:51:16.126049 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 14:51:16.126569 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 15:04:13.400474 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 15:04:13.400947 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 15:06:41.430136 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 15:07:06.435222 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 15:07:06.436020 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 15:10:09.490602 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 15:10:20.279312 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 15:10:20.280228 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 15:11:46.276296 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 15:11:51.917589 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 15:11:51.918349 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 15:12:28.185955 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 15:13:38.454693 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 15:13:38.455240 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 15:14:50.187664 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 15:15:51.520016 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 15:15:51.520620 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 15:17:56.940926 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.22.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 15:26:33.228507 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 15:26:33.228980 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 15:27:47.951659 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.22.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 15:30:02.798007 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 15:30:02.798698 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 15:33:49.746764 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.22.0.2. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 18:45:08.360611 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 18:45:08.361551 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 18:45:19.094195 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 18:45:38.631344 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 18:45:38.632224 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 18:47:00.822676 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 18:47:40.308067 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 18:47:40.308823 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 18:49:25.826516 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 18:49:43.479790 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 18:49:43.480554 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 18:49:59.227437 2023] [core:alert] [pid 17] [client 172.18.0.4:49070] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:49:59.925799 2023] [core:alert] [pid 20] [client 172.18.0.4:46156] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:49:59.925966 2023] [core:alert] [pid 21] [client 172.18.0.4:46164] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:49:59.926043 2023] [core:alert] [pid 18] [client 172.18.0.4:46176] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:49:59.926192 2023] [core:alert] [pid 19] [client 172.18.0.4:46158] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:49:59.926857 2023] [core:alert] [pid 17] [client 172.18.0.4:46186] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:49:59.935019 2023] [core:alert] [pid 20] [client 172.18.0.4:46198] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:49:59.935541 2023] [core:alert] [pid 18] [client 172.18.0.4:46188] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.008956 2023] [core:alert] [pid 17] [client 172.18.0.4:46248] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.009085 2023] [core:alert] [pid 18] [client 172.18.0.4:46228] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.009537 2023] [core:alert] [pid 19] [client 172.18.0.4:46250] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.009876 2023] [core:alert] [pid 20] [client 172.18.0.4:46242] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.013624 2023] [core:alert] [pid 21] [client 172.18.0.4:46212] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.443047 2023] [core:alert] [pid 19] [client 172.18.0.4:46266] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.444236 2023] [core:alert] [pid 20] [client 172.18.0.4:46264] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.458120 2023] [core:alert] [pid 21] [client 172.18.0.4:46276] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.458864 2023] [core:alert] [pid 18] [client 172.18.0.4:46282] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.506696 2023] [core:alert] [pid 21] [client 172.18.0.4:46296] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.506799 2023] [core:alert] [pid 19] [client 172.18.0.4:46312] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.506821 2023] [core:alert] [pid 20] [client 172.18.0.4:46324] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.510020 2023] [core:alert] [pid 17] [client 172.18.0.4:46314] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.517290 2023] [core:alert] [pid 18] [client 172.18.0.4:46334] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.519412 2023] [core:alert] [pid 17] [client 172.18.0.4:46340] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.523309 2023] [core:alert] [pid 20] [client 172.18.0.4:46344] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.533515 2023] [core:alert] [pid 18] [client 172.18.0.4:46348] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.542363 2023] [core:alert] [pid 21] [client 172.18.0.4:46364] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.549959 2023] [core:alert] [pid 19] [client 172.18.0.4:46372] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.562104 2023] [core:alert] [pid 20] [client 172.18.0.4:46384] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.563115 2023] [core:alert] [pid 17] [client 172.18.0.4:46382] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.672480 2023] [core:alert] [pid 20] [client 172.18.0.4:46410] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.673417 2023] [core:alert] [pid 19] [client 172.18.0.4:46442] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.673092 2023] [core:alert] [pid 21] [client 172.18.0.4:46408] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.674198 2023] [core:alert] [pid 18] [client 172.18.0.4:46406] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.721443 2023] [core:alert] [pid 17] [client 172.18.0.4:46452] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.721482 2023] [core:alert] [pid 20] [client 172.18.0.4:46454] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.721551 2023] [core:alert] [pid 18] [client 172.18.0.4:46456] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.721639 2023] [core:alert] [pid 19] [client 172.18.0.4:46458] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.722232 2023] [core:alert] [pid 21] [client 172.18.0.4:46490] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.729283 2023] [core:alert] [pid 17] [client 172.18.0.4:46494] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.766369 2023] [core:alert] [pid 20] [client 172.18.0.4:46506] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.767079 2023] [core:alert] [pid 18] [client 172.18.0.4:46508] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.827598 2023] [core:alert] [pid 21] [client 172.18.0.4:46522] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.827680 2023] [core:alert] [pid 19] [client 172.18.0.4:46518] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.828397 2023] [core:alert] [pid 17] [client 172.18.0.4:46534] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.904121 2023] [core:alert] [pid 20] [client 172.18.0.4:46544] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:00.955271 2023] [core:alert] [pid 18] [client 172.18.0.4:46558] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.018582 2023] [core:alert] [pid 20] [client 172.18.0.4:46578] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.018839 2023] [core:alert] [pid 21] [client 172.18.0.4:46574] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.018897 2023] [core:alert] [pid 18] [client 172.18.0.4:46584] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.018994 2023] [core:alert] [pid 19] [client 172.18.0.4:46576] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.019951 2023] [core:alert] [pid 17] [client 172.18.0.4:46596] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.031595 2023] [core:alert] [pid 20] [client 172.18.0.4:46608] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.032884 2023] [core:alert] [pid 18] [client 172.18.0.4:46622] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.034652 2023] [core:alert] [pid 19] [client 172.18.0.4:46624] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.039682 2023] [core:alert] [pid 21] [client 172.18.0.4:46614] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.075831 2023] [core:alert] [pid 17] [client 172.18.0.4:46626] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.076661 2023] [core:alert] [pid 18] [client 172.18.0.4:46630] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.076036 2023] [core:alert] [pid 20] [client 172.18.0.4:46642] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.094810 2023] [core:alert] [pid 21] [client 172.18.0.4:46658] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.099861 2023] [core:alert] [pid 19] [client 172.18.0.4:46644] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.110192 2023] [core:alert] [pid 18] [client 172.18.0.4:46670] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.110526 2023] [core:alert] [pid 20] [client 172.18.0.4:46686] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.112076 2023] [core:alert] [pid 17] [client 172.18.0.4:46666] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.115980 2023] [core:alert] [pid 21] [client 172.18.0.4:46688] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.120901 2023] [core:alert] [pid 19] [client 172.18.0.4:46712] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.122946 2023] [core:alert] [pid 18] [client 172.18.0.4:46718] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.130968 2023] [core:alert] [pid 20] [client 172.18.0.4:46722] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.162930 2023] [core:alert] [pid 17] [client 172.18.0.4:46728] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.187230 2023] [core:alert] [pid 21] [client 172.18.0.4:46734] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.187751 2023] [core:alert] [pid 18] [client 172.18.0.4:46762] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.190768 2023] [core:alert] [pid 19] [client 172.18.0.4:46748] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.191672 2023] [core:alert] [pid 20] [client 172.18.0.4:46772] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.193550 2023] [core:alert] [pid 17] [client 172.18.0.4:46784] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.204801 2023] [core:alert] [pid 21] [client 172.18.0.4:46790] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.205683 2023] [core:alert] [pid 19] [client 172.18.0.4:46812] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.210083 2023] [core:alert] [pid 17] [client 172.18.0.4:46808] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.217663 2023] [core:alert] [pid 18] [client 172.18.0.4:46800] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.220852 2023] [core:alert] [pid 20] [client 172.18.0.4:46814] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.221552 2023] [core:alert] [pid 21] [client 172.18.0.4:46810] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.223119 2023] [core:alert] [pid 19] [client 172.18.0.4:46860] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.243583 2023] [core:alert] [pid 17] [client 172.18.0.4:46870] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.251479 2023] [core:alert] [pid 20] [client 172.18.0.4:46884] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.264407 2023] [core:alert] [pid 21] [client 172.18.0.4:46888] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.267814 2023] [core:alert] [pid 19] [client 172.18.0.4:46904] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.278114 2023] [core:alert] [pid 17] [client 172.18.0.4:46916] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.285037 2023] [core:alert] [pid 18] [client 172.18.0.4:46920] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.287578 2023] [core:alert] [pid 19] [client 172.18.0.4:46942] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.287937 2023] [core:alert] [pid 20] [client 172.18.0.4:46926] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.294424 2023] [core:alert] [pid 21] [client 172.18.0.4:46948] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.339134 2023] [core:alert] [pid 21] [client 172.18.0.4:46964] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.340034 2023] [core:alert] [pid 17] [client 172.18.0.4:46960] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.345922 2023] [core:alert] [pid 18] [client 172.18.0.4:46974] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.355956 2023] [core:alert] [pid 19] [client 172.18.0.4:46988] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.358809 2023] [core:alert] [pid 20] [client 172.18.0.4:46990] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.360529 2023] [core:alert] [pid 21] [client 172.18.0.4:47004] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.375193 2023] [core:alert] [pid 17] [client 172.18.0.4:47010] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.391948 2023] [core:alert] [pid 18] [client 172.18.0.4:47016] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.395670 2023] [core:alert] [pid 20] [client 172.18.0.4:47020] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.399147 2023] [core:alert] [pid 21] [client 172.18.0.4:47024] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.406550 2023] [core:alert] [pid 19] [client 172.18.0.4:47026] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.412395 2023] [core:alert] [pid 17] [client 172.18.0.4:47028] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.418441 2023] [core:alert] [pid 18] [client 172.18.0.4:47040] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.449579 2023] [core:alert] [pid 20] [client 172.18.0.4:47052] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.450284 2023] [core:alert] [pid 21] [client 172.18.0.4:47054] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.485756 2023] [core:alert] [pid 19] [client 172.18.0.4:47064] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.536745 2023] [core:alert] [pid 20] [client 172.18.0.4:47072] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.537258 2023] [core:alert] [pid 18] [client 172.18.0.4:47070] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.538236 2023] [core:alert] [pid 17] [client 172.18.0.4:47074] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.611598 2023] [core:alert] [pid 21] [client 172.18.0.4:47108] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.651777 2023] [core:alert] [pid 20] [client 172.18.0.4:47114] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.651847 2023] [core:alert] [pid 18] [client 172.18.0.4:47112] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.652041 2023] [core:alert] [pid 19] [client 172.18.0.4:47124] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.654477 2023] [core:alert] [pid 17] [client 172.18.0.4:47128] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.665364 2023] [core:alert] [pid 21] [client 172.18.0.4:47140] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.786228 2023] [core:alert] [pid 20] [client 172.18.0.4:47146] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.869502 2023] [core:alert] [pid 18] [client 172.18.0.4:47148] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.882986 2023] [core:alert] [pid 19] [client 172.18.0.4:47158] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.883264 2023] [core:alert] [pid 17] [client 172.18.0.4:47166] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.886401 2023] [core:alert] [pid 21] [client 172.18.0.4:47178] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.901854 2023] [core:alert] [pid 20] [client 172.18.0.4:47194] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.923903 2023] [core:alert] [pid 18] [client 172.18.0.4:47200] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.924903 2023] [core:alert] [pid 19] [client 172.18.0.4:47206] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.943095 2023] [core:alert] [pid 17] [client 172.18.0.4:47216] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:01.961273 2023] [core:alert] [pid 21] [client 172.18.0.4:47228] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.024823 2023] [core:alert] [pid 18] [client 172.18.0.4:47242] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.026108 2023] [core:alert] [pid 20] [client 172.18.0.4:47234] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.026849 2023] [core:alert] [pid 19] [client 172.18.0.4:47254] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.037192 2023] [core:alert] [pid 17] [client 172.18.0.4:47258] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.066450 2023] [core:alert] [pid 21] [client 172.18.0.4:47274] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.089969 2023] [core:alert] [pid 18] [client 172.18.0.4:47276] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.092778 2023] [core:alert] [pid 20] [client 172.18.0.4:47282] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.097336 2023] [core:alert] [pid 19] [client 172.18.0.4:47288] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.099523 2023] [core:alert] [pid 17] [client 172.18.0.4:47292] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.129510 2023] [core:alert] [pid 21] [client 172.18.0.4:47308] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.151320 2023] [core:alert] [pid 17] [client 172.18.0.4:47336] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.151412 2023] [core:alert] [pid 18] [client 172.18.0.4:47324] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.151528 2023] [core:alert] [pid 19] [client 172.18.0.4:47316] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.153607 2023] [core:alert] [pid 20] [client 172.18.0.4:47328] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.178184 2023] [core:alert] [pid 21] [client 172.18.0.4:47350] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.197675 2023] [core:alert] [pid 18] [client 172.18.0.4:47358] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.197987 2023] [core:alert] [pid 17] [client 172.18.0.4:47360] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.198454 2023] [core:alert] [pid 19] [client 172.18.0.4:47372] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.247892 2023] [core:alert] [pid 20] [client 172.18.0.4:47376] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.311237 2023] [core:alert] [pid 21] [client 172.18.0.4:47384] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.311538 2023] [core:alert] [pid 17] [client 172.18.0.4:47378] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.311879 2023] [core:alert] [pid 19] [client 172.18.0.4:47380] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.311973 2023] [core:alert] [pid 18] [client 172.18.0.4:47382] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.312701 2023] [core:alert] [pid 20] [client 172.18.0.4:47402] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.366766 2023] [core:alert] [pid 17] [client 172.18.0.4:47430] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:02.428238 2023] [core:alert] [pid 19] [client 172.18.0.4:47440] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 18:50:53.131486 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 18:51:15.170984 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 18:51:15.171955 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 18:59:16.756918 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 19:07:53.476797 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 19:07:53.477858 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 19:08:13.598684 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 19:17:26.044768 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 19:17:26.045590 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 19:17:31.874198 2023] [autoindex:error] [pid 17] [client 172.19.0.1:58114] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Thu Mar 09 19:17:34.435795 2023] [autoindex:error] [pid 17] [client 172.19.0.1:58114] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Thu Mar 09 19:18:32.033929 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 19:18:43.950720 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 19:18:43.951560 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 19:23:36.385307 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 19:34:32.691440 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 19:34:32.692410 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 19:36:39.366605 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 19:42:42.216693 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 19:42:42.217519 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 19:42:57.601995 2023] [core:alert] [pid 17] [client 172.19.0.4:42408] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.345186 2023] [core:alert] [pid 17] [client 172.19.0.4:42460] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.346228 2023] [core:alert] [pid 21] [client 172.19.0.4:42446] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.345340 2023] [core:alert] [pid 18] [client 172.19.0.4:42416] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.345288 2023] [core:alert] [pid 20] [client 172.19.0.4:42442] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.345440 2023] [core:alert] [pid 19] [client 172.19.0.4:42418] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.356373 2023] [core:alert] [pid 21] [client 172.19.0.4:42476] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.357071 2023] [core:alert] [pid 17] [client 172.19.0.4:42484] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.416863 2023] [core:alert] [pid 18] [client 172.19.0.4:42496] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.417067 2023] [core:alert] [pid 19] [client 172.19.0.4:42494] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.417188 2023] [core:alert] [pid 21] [client 172.19.0.4:42530] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.417957 2023] [core:alert] [pid 20] [client 172.19.0.4:42498] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.443329 2023] [core:alert] [pid 20] [client 172.19.0.4:42512] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.803511 2023] [core:alert] [pid 18] [client 172.19.0.4:42544] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.804498 2023] [core:alert] [pid 19] [client 172.19.0.4:42542] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.818875 2023] [core:alert] [pid 17] [client 172.19.0.4:42556] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.820329 2023] [core:alert] [pid 21] [client 172.19.0.4:42564] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.882746 2023] [core:alert] [pid 20] [client 172.19.0.4:42574] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.905894 2023] [core:alert] [pid 18] [client 172.19.0.4:42576] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.906809 2023] [core:alert] [pid 19] [client 172.19.0.4:42592] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.910649 2023] [core:alert] [pid 21] [client 172.19.0.4:42622] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.910694 2023] [core:alert] [pid 17] [client 172.19.0.4:42602] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.916828 2023] [core:alert] [pid 20] [client 172.19.0.4:42606] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.923752 2023] [core:alert] [pid 19] [client 172.19.0.4:42626] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.925778 2023] [core:alert] [pid 18] [client 172.19.0.4:42630] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.945911 2023] [core:alert] [pid 21] [client 172.19.0.4:42638] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.959628 2023] [core:alert] [pid 17] [client 172.19.0.4:42652] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.972414 2023] [core:alert] [pid 20] [client 172.19.0.4:42664] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:58.981669 2023] [core:alert] [pid 19] [client 172.19.0.4:42670] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.122923 2023] [core:alert] [pid 18] [client 172.19.0.4:42678] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.122987 2023] [core:alert] [pid 20] [client 172.19.0.4:42702] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.123045 2023] [core:alert] [pid 21] [client 172.19.0.4:42694] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.123823 2023] [core:alert] [pid 17] [client 172.19.0.4:42676] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.187563 2023] [core:alert] [pid 19] [client 172.19.0.4:42712] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.187841 2023] [core:alert] [pid 21] [client 172.19.0.4:42726] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.187959 2023] [core:alert] [pid 20] [client 172.19.0.4:42724] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.187963 2023] [core:alert] [pid 18] [client 172.19.0.4:42720] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.190230 2023] [core:alert] [pid 17] [client 172.19.0.4:42750] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.206556 2023] [core:alert] [pid 19] [client 172.19.0.4:42742] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.252727 2023] [core:alert] [pid 21] [client 172.19.0.4:42764] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.258954 2023] [core:alert] [pid 20] [client 172.19.0.4:42772] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.312537 2023] [core:alert] [pid 17] [client 172.19.0.4:42786] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.312907 2023] [core:alert] [pid 18] [client 172.19.0.4:42798] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.313662 2023] [core:alert] [pid 19] [client 172.19.0.4:42796] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.393462 2023] [core:alert] [pid 21] [client 172.19.0.4:42808] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.455883 2023] [core:alert] [pid 20] [client 172.19.0.4:42816] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.528667 2023] [core:alert] [pid 18] [client 172.19.0.4:42830] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.531950 2023] [core:alert] [pid 19] [client 172.19.0.4:42864] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.532092 2023] [core:alert] [pid 17] [client 172.19.0.4:42850] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.532314 2023] [core:alert] [pid 21] [client 172.19.0.4:42860] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.533417 2023] [core:alert] [pid 20] [client 172.19.0.4:42878] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.546060 2023] [core:alert] [pid 18] [client 172.19.0.4:42840] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.546200 2023] [core:alert] [pid 19] [client 172.19.0.4:42894] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.547820 2023] [core:alert] [pid 17] [client 172.19.0.4:42886] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.560852 2023] [core:alert] [pid 19] [client 172.19.0.4:37272] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.603530 2023] [core:alert] [pid 20] [client 172.19.0.4:37276] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.609366 2023] [core:alert] [pid 21] [client 172.19.0.4:37288] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.612107 2023] [core:alert] [pid 18] [client 172.19.0.4:37290] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.613090 2023] [core:alert] [pid 17] [client 172.19.0.4:37292] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.624727 2023] [core:alert] [pid 20] [client 172.19.0.4:37316] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.632071 2023] [core:alert] [pid 19] [client 172.19.0.4:37318] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.639464 2023] [core:alert] [pid 21] [client 172.19.0.4:37334] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.644259 2023] [core:alert] [pid 18] [client 172.19.0.4:37346] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.645406 2023] [core:alert] [pid 17] [client 172.19.0.4:37354] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.669991 2023] [core:alert] [pid 20] [client 172.19.0.4:37360] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.681724 2023] [core:alert] [pid 21] [client 172.19.0.4:37374] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.695890 2023] [core:alert] [pid 19] [client 172.19.0.4:37370] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.698839 2023] [core:alert] [pid 17] [client 172.19.0.4:37390] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.701881 2023] [core:alert] [pid 18] [client 172.19.0.4:37396] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.709136 2023] [core:alert] [pid 20] [client 172.19.0.4:37398] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.720729 2023] [core:alert] [pid 21] [client 172.19.0.4:37414] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.721925 2023] [core:alert] [pid 19] [client 172.19.0.4:37426] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.740998 2023] [core:alert] [pid 17] [client 172.19.0.4:37432] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.742432 2023] [core:alert] [pid 18] [client 172.19.0.4:37438] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.757385 2023] [core:alert] [pid 20] [client 172.19.0.4:37450] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.778953 2023] [core:alert] [pid 21] [client 172.19.0.4:37456] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.783816 2023] [core:alert] [pid 19] [client 172.19.0.4:37460] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.786203 2023] [core:alert] [pid 17] [client 172.19.0.4:37468] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.788354 2023] [core:alert] [pid 18] [client 172.19.0.4:37470] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.801618 2023] [core:alert] [pid 19] [client 172.19.0.4:37498] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.803843 2023] [core:alert] [pid 20] [client 172.19.0.4:37476] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.804237 2023] [core:alert] [pid 17] [client 172.19.0.4:37488] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.807917 2023] [core:alert] [pid 18] [client 172.19.0.4:37502] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.813587 2023] [core:alert] [pid 19] [client 172.19.0.4:37518] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.817863 2023] [core:alert] [pid 21] [client 172.19.0.4:37528] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.835081 2023] [core:alert] [pid 20] [client 172.19.0.4:37530] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.845743 2023] [core:alert] [pid 19] [client 172.19.0.4:37560] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.845743 2023] [core:alert] [pid 18] [client 172.19.0.4:37536] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.846548 2023] [core:alert] [pid 17] [client 172.19.0.4:37548] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.865610 2023] [core:alert] [pid 21] [client 172.19.0.4:37572] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.874719 2023] [core:alert] [pid 20] [client 172.19.0.4:37580] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.878386 2023] [core:alert] [pid 18] [client 172.19.0.4:37576] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.887502 2023] [core:alert] [pid 17] [client 172.19.0.4:37590] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.889829 2023] [core:alert] [pid 19] [client 172.19.0.4:37596] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.898399 2023] [core:alert] [pid 21] [client 172.19.0.4:37602] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.909067 2023] [core:alert] [pid 20] [client 172.19.0.4:37612] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.912214 2023] [core:alert] [pid 18] [client 172.19.0.4:37628] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.932418 2023] [core:alert] [pid 17] [client 172.19.0.4:37644] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.942056 2023] [core:alert] [pid 19] [client 172.19.0.4:37658] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.948700 2023] [core:alert] [pid 21] [client 172.19.0.4:37668] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.967035 2023] [core:alert] [pid 20] [client 172.19.0.4:37674] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.994006 2023] [core:alert] [pid 17] [client 172.19.0.4:37690] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:42:59.994675 2023] [core:alert] [pid 18] [client 172.19.0.4:37684] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.046529 2023] [core:alert] [pid 19] [client 172.19.0.4:37698] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.096506 2023] [core:alert] [pid 21] [client 172.19.0.4:37710] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.165187 2023] [core:alert] [pid 18] [client 172.19.0.4:37724] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.165238 2023] [core:alert] [pid 17] [client 172.19.0.4:37726] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.165999 2023] [core:alert] [pid 20] [client 172.19.0.4:37722] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.235026 2023] [core:alert] [pid 19] [client 172.19.0.4:37746] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.291272 2023] [core:alert] [pid 21] [client 172.19.0.4:37754] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.292913 2023] [core:alert] [pid 18] [client 172.19.0.4:37756] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.299521 2023] [core:alert] [pid 17] [client 172.19.0.4:37762] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.304077 2023] [core:alert] [pid 20] [client 172.19.0.4:37778] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.305412 2023] [core:alert] [pid 19] [client 172.19.0.4:37786] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.423424 2023] [core:alert] [pid 22] [client 172.19.0.4:37802] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.493305 2023] [core:alert] [pid 18] [client 172.19.0.4:37824] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.493630 2023] [core:alert] [pid 21] [client 172.19.0.4:37810] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.495404 2023] [core:alert] [pid 17] [client 172.19.0.4:37832] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.529106 2023] [core:alert] [pid 20] [client 172.19.0.4:37856] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.529698 2023] [core:alert] [pid 19] [client 172.19.0.4:37840] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.582070 2023] [core:alert] [pid 22] [client 172.19.0.4:37868] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.582198 2023] [core:alert] [pid 18] [client 172.19.0.4:37874] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.586756 2023] [core:alert] [pid 21] [client 172.19.0.4:37884] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.600694 2023] [core:alert] [pid 17] [client 172.19.0.4:37892] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.603632 2023] [core:alert] [pid 20] [client 172.19.0.4:37890] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.645841 2023] [core:alert] [pid 19] [client 172.19.0.4:37902] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.661092 2023] [core:alert] [pid 18] [client 172.19.0.4:37904] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.661968 2023] [core:alert] [pid 21] [client 172.19.0.4:37916] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.664434 2023] [core:alert] [pid 22] [client 172.19.0.4:37914] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.687376 2023] [core:alert] [pid 20] [client 172.19.0.4:37918] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.725609 2023] [core:alert] [pid 18] [client 172.19.0.4:37928] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.727009 2023] [core:alert] [pid 19] [client 172.19.0.4:37926] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.727262 2023] [core:alert] [pid 17] [client 172.19.0.4:37946] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.728289 2023] [core:alert] [pid 21] [client 172.19.0.4:37948] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.740877 2023] [core:alert] [pid 22] [client 172.19.0.4:37962] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.780202 2023] [core:alert] [pid 20] [client 172.19.0.4:37968] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.782665 2023] [core:alert] [pid 19] [client 172.19.0.4:37970] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.793442 2023] [core:alert] [pid 21] [client 172.19.0.4:38002] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.794779 2023] [core:alert] [pid 18] [client 172.19.0.4:37986] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.816298 2023] [core:alert] [pid 17] [client 172.19.0.4:38008] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.850126 2023] [core:alert] [pid 20] [client 172.19.0.4:38018] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.850978 2023] [core:alert] [pid 22] [client 172.19.0.4:38024] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.894199 2023] [core:alert] [pid 19] [client 172.19.0.4:38034] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.943461 2023] [core:alert] [pid 18] [client 172.19.0.4:38046] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.943531 2023] [core:alert] [pid 17] [client 172.19.0.4:38062] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.943639 2023] [core:alert] [pid 21] [client 172.19.0.4:38044] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.945113 2023] [core:alert] [pid 22] [client 172.19.0.4:38080] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.946097 2023] [core:alert] [pid 20] [client 172.19.0.4:38070] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:00.999344 2023] [core:alert] [pid 19] [client 172.19.0.4:38084] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:43:01.054753 2023] [core:alert] [pid 17] [client 172.19.0.4:38098] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:45:10.494627 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 19:55:52.922713 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 19:55:52.923580 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 19:55:59.480939 2023] [core:alert] [pid 17] [client 172.19.0.1:52552] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:55:59.990300 2023] [core:alert] [pid 18] [client 172.19.0.1:52550] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration, referer: http://localhost:8080/
+[Thu Mar 09 19:56:09.636935 2023] [core:alert] [pid 19] [client 172.19.0.4:43800] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.315393 2023] [core:alert] [pid 17] [client 172.19.0.4:43810] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.315363 2023] [core:alert] [pid 20] [client 172.19.0.4:43802] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.315872 2023] [core:alert] [pid 21] [client 172.19.0.4:43808] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.316987 2023] [core:alert] [pid 18] [client 172.19.0.4:43812] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.317719 2023] [core:alert] [pid 19] [client 172.19.0.4:43828] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.323396 2023] [core:alert] [pid 17] [client 172.19.0.4:43830] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.323488 2023] [core:alert] [pid 20] [client 172.19.0.4:43846] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.395428 2023] [core:alert] [pid 20] [client 172.19.0.4:43864] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.396256 2023] [core:alert] [pid 21] [client 172.19.0.4:43858] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.396833 2023] [core:alert] [pid 17] [client 172.19.0.4:43860] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.397165 2023] [core:alert] [pid 19] [client 172.19.0.4:43862] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.397260 2023] [core:alert] [pid 18] [client 172.19.0.4:43856] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.695215 2023] [core:alert] [pid 21] [client 172.19.0.4:43932] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.695336 2023] [core:alert] [pid 20] [client 172.19.0.4:43916] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.709626 2023] [core:alert] [pid 17] [client 172.19.0.4:43938] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.709687 2023] [core:alert] [pid 19] [client 172.19.0.4:43950] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.754208 2023] [core:alert] [pid 21] [client 172.19.0.4:43952] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.754279 2023] [core:alert] [pid 20] [client 172.19.0.4:43964] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.754308 2023] [core:alert] [pid 18] [client 172.19.0.4:43962] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.761065 2023] [core:alert] [pid 19] [client 172.19.0.4:43970] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.761176 2023] [core:alert] [pid 17] [client 172.19.0.4:43980] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.761489 2023] [core:alert] [pid 21] [client 172.19.0.4:43984] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.782463 2023] [core:alert] [pid 20] [client 172.19.0.4:43992] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.788968 2023] [core:alert] [pid 19] [client 172.19.0.4:44008] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.789068 2023] [core:alert] [pid 21] [client 172.19.0.4:44010] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.801305 2023] [core:alert] [pid 18] [client 172.19.0.4:44032] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.802416 2023] [core:alert] [pid 17] [client 172.19.0.4:44046] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.804821 2023] [core:alert] [pid 20] [client 172.19.0.4:44052] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.901852 2023] [core:alert] [pid 17] [client 172.19.0.4:44084] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.902159 2023] [core:alert] [pid 20] [client 172.19.0.4:44076] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.902598 2023] [core:alert] [pid 21] [client 172.19.0.4:44078] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.902702 2023] [core:alert] [pid 19] [client 172.19.0.4:44064] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.949574 2023] [core:alert] [pid 21] [client 172.19.0.4:44100] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.949630 2023] [core:alert] [pid 20] [client 172.19.0.4:44102] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.949925 2023] [core:alert] [pid 19] [client 172.19.0.4:44098] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.950333 2023] [core:alert] [pid 17] [client 172.19.0.4:44092] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.950357 2023] [core:alert] [pid 18] [client 172.19.0.4:44094] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.952822 2023] [core:alert] [pid 22] [client 172.19.0.4:44096] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.992470 2023] [core:alert] [pid 20] [client 172.19.0.4:44158] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:10.992543 2023] [core:alert] [pid 19] [client 172.19.0.4:44166] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.033348 2023] [core:alert] [pid 17] [client 172.19.0.4:44184] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.033422 2023] [core:alert] [pid 21] [client 172.19.0.4:44170] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.033483 2023] [core:alert] [pid 18] [client 172.19.0.4:44192] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.117678 2023] [core:alert] [pid 22] [client 172.19.0.4:44194] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.165331 2023] [core:alert] [pid 20] [client 172.19.0.4:44202] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.220561 2023] [core:alert] [pid 21] [client 172.19.0.4:44216] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.220656 2023] [core:alert] [pid 20] [client 172.19.0.4:44250] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.220757 2023] [core:alert] [pid 17] [client 172.19.0.4:44236] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.221066 2023] [core:alert] [pid 18] [client 172.19.0.4:44258] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.221289 2023] [core:alert] [pid 22] [client 172.19.0.4:44270] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.221391 2023] [core:alert] [pid 19] [client 172.19.0.4:44220] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.227534 2023] [core:alert] [pid 21] [client 172.19.0.4:44272] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.233637 2023] [core:alert] [pid 20] [client 172.19.0.4:44282] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.254722 2023] [core:alert] [pid 17] [client 172.19.0.4:44298] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.254909 2023] [core:alert] [pid 18] [client 172.19.0.4:44314] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.270036 2023] [core:alert] [pid 22] [client 172.19.0.4:44330] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.270307 2023] [core:alert] [pid 19] [client 172.19.0.4:44346] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.270378 2023] [core:alert] [pid 20] [client 172.19.0.4:44364] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.271553 2023] [core:alert] [pid 21] [client 172.19.0.4:44348] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.272909 2023] [core:alert] [pid 17] [client 172.19.0.4:44378] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.276769 2023] [core:alert] [pid 18] [client 172.19.0.4:44390] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.285087 2023] [core:alert] [pid 22] [client 172.19.0.4:44392] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.293501 2023] [core:alert] [pid 19] [client 172.19.0.4:44402] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.301753 2023] [core:alert] [pid 20] [client 172.19.0.4:44410] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.308508 2023] [core:alert] [pid 17] [client 172.19.0.4:44422] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.311781 2023] [core:alert] [pid 21] [client 172.19.0.4:44434] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.315968 2023] [core:alert] [pid 22] [client 172.19.0.4:44458] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.316162 2023] [core:alert] [pid 18] [client 172.19.0.4:44446] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.321147 2023] [core:alert] [pid 19] [client 172.19.0.4:44466] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.331457 2023] [core:alert] [pid 20] [client 172.19.0.4:44480] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.347712 2023] [core:alert] [pid 17] [client 172.19.0.4:44488] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.347913 2023] [core:alert] [pid 22] [client 172.19.0.4:44504] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.347997 2023] [core:alert] [pid 21] [client 172.19.0.4:44518] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.354965 2023] [core:alert] [pid 18] [client 172.19.0.4:44534] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.381198 2023] [core:alert] [pid 19] [client 172.19.0.4:44542] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.384257 2023] [core:alert] [pid 17] [client 172.19.0.4:44566] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.384382 2023] [core:alert] [pid 20] [client 172.19.0.4:44558] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.391517 2023] [core:alert] [pid 22] [client 172.19.0.4:44598] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.389770 2023] [core:alert] [pid 18] [client 172.19.0.4:44584] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.399141 2023] [core:alert] [pid 21] [client 172.19.0.4:44580] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.403328 2023] [core:alert] [pid 17] [client 172.19.0.4:44626] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.405366 2023] [core:alert] [pid 19] [client 172.19.0.4:44614] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.407660 2023] [core:alert] [pid 20] [client 172.19.0.4:44638] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.410866 2023] [core:alert] [pid 21] [client 172.19.0.4:44648] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.419642 2023] [core:alert] [pid 18] [client 172.19.0.4:44640] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.423265 2023] [core:alert] [pid 20] [client 172.19.0.4:44650] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.424161 2023] [core:alert] [pid 17] [client 172.19.0.4:44658] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.425254 2023] [core:alert] [pid 22] [client 172.19.0.4:44688] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.425822 2023] [core:alert] [pid 21] [client 172.19.0.4:44680] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.425337 2023] [core:alert] [pid 19] [client 172.19.0.4:44670] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.443433 2023] [core:alert] [pid 18] [client 172.19.0.4:44690] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.472455 2023] [core:alert] [pid 20] [client 172.19.0.4:44696] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.474680 2023] [core:alert] [pid 22] [client 172.19.0.4:44706] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.482185 2023] [core:alert] [pid 17] [client 172.19.0.4:44720] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.489181 2023] [core:alert] [pid 19] [client 172.19.0.4:44726] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.496690 2023] [core:alert] [pid 20] [client 172.19.0.4:44764] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.496908 2023] [core:alert] [pid 18] [client 172.19.0.4:44744] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.497133 2023] [core:alert] [pid 21] [client 172.19.0.4:44742] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.520445 2023] [core:alert] [pid 22] [client 172.19.0.4:44774] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.522198 2023] [core:alert] [pid 17] [client 172.19.0.4:44778] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.537420 2023] [core:alert] [pid 19] [client 172.19.0.4:44794] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.576893 2023] [core:alert] [pid 20] [client 172.19.0.4:44800] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.605378 2023] [core:alert] [pid 18] [client 172.19.0.4:44802] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.637488 2023] [core:alert] [pid 21] [client 172.19.0.4:44818] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.667834 2023] [core:alert] [pid 22] [client 172.19.0.4:44838] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.667922 2023] [core:alert] [pid 17] [client 172.19.0.4:44834] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.667935 2023] [core:alert] [pid 19] [client 172.19.0.4:44836] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.729576 2023] [core:alert] [pid 20] [client 172.19.0.4:44866] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.762342 2023] [core:alert] [pid 22] [client 172.19.0.4:44884] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.762393 2023] [core:alert] [pid 18] [client 172.19.0.4:44880] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.762476 2023] [core:alert] [pid 21] [client 172.19.0.4:44882] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.769108 2023] [core:alert] [pid 17] [client 172.19.0.4:44894] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.772051 2023] [core:alert] [pid 19] [client 172.19.0.4:44898] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.843148 2023] [core:alert] [pid 20] [client 172.19.0.4:44900] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.891823 2023] [core:alert] [pid 22] [client 172.19.0.4:44904] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.894120 2023] [core:alert] [pid 18] [client 172.19.0.4:44910] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.896739 2023] [core:alert] [pid 21] [client 172.19.0.4:44924] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.910908 2023] [core:alert] [pid 17] [client 172.19.0.4:44932] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.927966 2023] [core:alert] [pid 19] [client 172.19.0.4:44948] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.928837 2023] [core:alert] [pid 20] [client 172.19.0.4:44960] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.931690 2023] [core:alert] [pid 22] [client 172.19.0.4:44964] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.946358 2023] [core:alert] [pid 18] [client 172.19.0.4:44976] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.951558 2023] [core:alert] [pid 21] [client 172.19.0.4:44982] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.965988 2023] [core:alert] [pid 17] [client 172.19.0.4:44998] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.967892 2023] [core:alert] [pid 19] [client 172.19.0.4:45000] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.984668 2023] [core:alert] [pid 20] [client 172.19.0.4:45012] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.995547 2023] [core:alert] [pid 22] [client 172.19.0.4:45016] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:11.999395 2023] [core:alert] [pid 18] [client 172.19.0.4:45022] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.004976 2023] [core:alert] [pid 24] [client 172.19.0.4:45024] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.013525 2023] [core:alert] [pid 23] [client 172.19.0.4:45034] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.026046 2023] [core:alert] [pid 21] [client 172.19.0.4:45048] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.041340 2023] [core:alert] [pid 19] [client 172.19.0.4:45056] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.043693 2023] [core:alert] [pid 17] [client 172.19.0.4:45072] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.043998 2023] [core:alert] [pid 20] [client 172.19.0.4:45078] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.055940 2023] [core:alert] [pid 22] [client 172.19.0.4:45082] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.062602 2023] [core:alert] [pid 18] [client 172.19.0.4:45092] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.087344 2023] [core:alert] [pid 24] [client 172.19.0.4:45106] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.088088 2023] [core:alert] [pid 23] [client 172.19.0.4:45114] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.091368 2023] [core:alert] [pid 21] [client 172.19.0.4:45128] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.100427 2023] [core:alert] [pid 17] [client 172.19.0.4:45140] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.100704 2023] [core:alert] [pid 19] [client 172.19.0.4:45154] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.128640 2023] [core:alert] [pid 20] [client 172.19.0.4:45168] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.164087 2023] [core:alert] [pid 18] [client 172.19.0.4:45176] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.164889 2023] [core:alert] [pid 22] [client 172.19.0.4:45174] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.165241 2023] [core:alert] [pid 23] [client 172.19.0.4:45206] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.165326 2023] [core:alert] [pid 24] [client 172.19.0.4:45204] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.167092 2023] [core:alert] [pid 21] [client 172.19.0.4:45222] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.204877 2023] [core:alert] [pid 17] [client 172.19.0.4:45232] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:56:12.246332 2023] [core:alert] [pid 19] [client 172.19.0.4:45244] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Thu Mar 09 19:57:34.862723 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 20:02:05.863143 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 20:02:05.863974 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 20:02:50.773076 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 20:03:05.907789 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 20:03:05.908587 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 20:16:19.848054 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Mar 09 20:21:20.672346 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Thu Mar 09 20:21:20.673359 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 09 20:22:40.786621 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.2. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 10 05:50:14.072375 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Fri Mar 10 05:50:14.073386 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Mar 10 05:51:24.225170 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 10 05:55:42.829618 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Fri Mar 10 05:55:42.830475 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Mar 10 05:58:17.086456 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 10 05:59:33.072743 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/8.2.3 configured -- resuming normal operations
+[Fri Mar 10 05:59:33.073717 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Mar 10 05:59:48.029852 2023] [core:alert] [pid 17] [client 172.19.0.4:54366] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:48.930142 2023] [core:alert] [pid 20] [client 172.19.0.4:54380] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:48.930147 2023] [core:alert] [pid 19] [client 172.19.0.4:54394] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:48.930258 2023] [core:alert] [pid 18] [client 172.19.0.4:54398] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:48.930348 2023] [core:alert] [pid 17] [client 172.19.0.4:54418] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:48.930352 2023] [core:alert] [pid 22] [client 172.19.0.4:54404] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:48.931920 2023] [core:alert] [pid 21] [client 172.19.0.4:54402] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:48.941302 2023] [core:alert] [pid 20] [client 172.19.0.4:54426] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:48.981140 2023] [core:alert] [pid 17] [client 172.19.0.4:54466] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:48.981723 2023] [core:alert] [pid 18] [client 172.19.0.4:54432] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:48.981778 2023] [core:alert] [pid 22] [client 172.19.0.4:54436] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:48.982027 2023] [core:alert] [pid 19] [client 172.19.0.4:54458] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:48.983180 2023] [core:alert] [pid 21] [client 172.19.0.4:54434] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.368428 2023] [core:alert] [pid 17] [client 172.19.0.4:54482] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.369159 2023] [core:alert] [pid 20] [client 172.19.0.4:54472] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.376032 2023] [core:alert] [pid 22] [client 172.19.0.4:54490] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.381179 2023] [core:alert] [pid 19] [client 172.19.0.4:54506] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.453611 2023] [core:alert] [pid 17] [client 172.19.0.4:54516] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.453800 2023] [core:alert] [pid 21] [client 172.19.0.4:54518] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.454598 2023] [core:alert] [pid 18] [client 172.19.0.4:54520] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.456275 2023] [core:alert] [pid 19] [client 172.19.0.4:54552] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.459547 2023] [core:alert] [pid 20] [client 172.19.0.4:54526] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.462642 2023] [core:alert] [pid 22] [client 172.19.0.4:54528] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.468081 2023] [core:alert] [pid 17] [client 172.19.0.4:54564] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.473943 2023] [core:alert] [pid 21] [client 172.19.0.4:54590] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.474722 2023] [core:alert] [pid 18] [client 172.19.0.4:54602] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.474792 2023] [core:alert] [pid 19] [client 172.19.0.4:54580] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.481549 2023] [core:alert] [pid 20] [client 172.19.0.4:54616] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.484723 2023] [core:alert] [pid 22] [client 172.19.0.4:54630] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.646350 2023] [core:alert] [pid 20] [client 172.19.0.4:54662] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.646431 2023] [core:alert] [pid 18] [client 172.19.0.4:54656] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.646541 2023] [core:alert] [pid 17] [client 172.19.0.4:54644] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.647277 2023] [core:alert] [pid 21] [client 172.19.0.4:54642] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.702091 2023] [core:alert] [pid 19] [client 172.19.0.4:54678] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.702335 2023] [core:alert] [pid 18] [client 172.19.0.4:54690] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.702495 2023] [core:alert] [pid 17] [client 172.19.0.4:54702] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.703236 2023] [core:alert] [pid 20] [client 172.19.0.4:54688] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.703595 2023] [core:alert] [pid 22] [client 172.19.0.4:54676] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.708958 2023] [core:alert] [pid 21] [client 172.19.0.4:54718] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.757086 2023] [core:alert] [pid 18] [client 172.19.0.4:54734] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.758046 2023] [core:alert] [pid 19] [client 172.19.0.4:54730] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.814471 2023] [core:alert] [pid 20] [client 172.19.0.4:54750] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.814578 2023] [core:alert] [pid 22] [client 172.19.0.4:54760] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.815238 2023] [core:alert] [pid 17] [client 172.19.0.4:54744] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.918643 2023] [core:alert] [pid 21] [client 172.19.0.4:54776] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:49.975225 2023] [core:alert] [pid 18] [client 172.19.0.4:54778] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.055928 2023] [core:alert] [pid 21] [client 172.19.0.4:54816] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.055993 2023] [core:alert] [pid 17] [client 172.19.0.4:54794] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.056474 2023] [core:alert] [pid 22] [client 172.19.0.4:54796] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.056698 2023] [core:alert] [pid 20] [client 172.19.0.4:54790] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.056928 2023] [core:alert] [pid 19] [client 172.19.0.4:54786] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.057532 2023] [core:alert] [pid 18] [client 172.19.0.4:54826] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.066755 2023] [core:alert] [pid 17] [client 172.19.0.4:54834] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.071298 2023] [core:alert] [pid 21] [client 172.19.0.4:54832] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.077111 2023] [core:alert] [pid 22] [client 172.19.0.4:54848] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.097894 2023] [core:alert] [pid 20] [client 172.19.0.4:54864] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.100307 2023] [core:alert] [pid 19] [client 172.19.0.4:54872] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.104636 2023] [core:alert] [pid 18] [client 172.19.0.4:54886] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.109020 2023] [core:alert] [pid 17] [client 172.19.0.4:54898] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.111505 2023] [core:alert] [pid 22] [client 172.19.0.4:54904] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.126975 2023] [core:alert] [pid 20] [client 172.19.0.4:54916] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.128069 2023] [core:alert] [pid 21] [client 172.19.0.4:54910] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.139892 2023] [core:alert] [pid 23] [client 172.19.0.4:54918] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.140787 2023] [core:alert] [pid 19] [client 172.19.0.4:54944] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.146615 2023] [core:alert] [pid 18] [client 172.19.0.4:54952] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.147929 2023] [core:alert] [pid 17] [client 172.19.0.4:54956] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.155417 2023] [core:alert] [pid 22] [client 172.19.0.4:54962] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.156158 2023] [core:alert] [pid 20] [client 172.19.0.4:54968] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.159742 2023] [core:alert] [pid 21] [client 172.19.0.4:54974] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.178712 2023] [core:alert] [pid 23] [client 172.19.0.4:54976] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.190639 2023] [core:alert] [pid 17] [client 172.19.0.4:54984] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.199343 2023] [core:alert] [pid 17] [client 172.19.0.4:55008] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.199508 2023] [core:alert] [pid 22] [client 172.19.0.4:55020] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.202717 2023] [core:alert] [pid 18] [client 172.19.0.4:54996] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.209008 2023] [core:alert] [pid 20] [client 172.19.0.4:55028] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.211651 2023] [core:alert] [pid 21] [client 172.19.0.4:55038] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.216128 2023] [core:alert] [pid 23] [client 172.19.0.4:55050] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.216194 2023] [core:alert] [pid 19] [client 172.19.0.4:55052] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.216976 2023] [core:alert] [pid 22] [client 172.19.0.4:55094] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.218492 2023] [core:alert] [pid 17] [client 172.19.0.4:55078] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.220343 2023] [core:alert] [pid 18] [client 172.19.0.4:55098] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.226520 2023] [core:alert] [pid 19] [client 172.19.0.4:55122] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.228328 2023] [core:alert] [pid 21] [client 172.19.0.4:55112] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.235870 2023] [core:alert] [pid 23] [client 172.19.0.4:55134] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.263426 2023] [core:alert] [pid 20] [client 172.19.0.4:55168] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.263761 2023] [core:alert] [pid 17] [client 172.19.0.4:55144] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.264767 2023] [core:alert] [pid 18] [client 172.19.0.4:55174] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.265548 2023] [core:alert] [pid 19] [client 172.19.0.4:55180] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.266825 2023] [core:alert] [pid 22] [client 172.19.0.4:55146] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.274391 2023] [core:alert] [pid 23] [client 172.19.0.4:55210] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.275483 2023] [core:alert] [pid 21] [client 172.19.0.4:55222] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.275299 2023] [core:alert] [pid 20] [client 172.19.0.4:55194] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.277372 2023] [core:alert] [pid 18] [client 172.19.0.4:55232] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.293133 2023] [core:alert] [pid 17] [client 172.19.0.4:55240] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.305415 2023] [core:alert] [pid 22] [client 172.19.0.4:55250] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.305694 2023] [core:alert] [pid 19] [client 172.19.0.4:55252] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.308418 2023] [core:alert] [pid 23] [client 172.19.0.4:55266] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.313722 2023] [core:alert] [pid 20] [client 172.19.0.4:55284] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.313859 2023] [core:alert] [pid 21] [client 172.19.0.4:55270] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.316626 2023] [core:alert] [pid 18] [client 172.19.0.4:55294] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.328908 2023] [core:alert] [pid 17] [client 172.19.0.4:55300] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.352752 2023] [core:alert] [pid 19] [client 172.19.0.4:55316] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.360184 2023] [core:alert] [pid 22] [client 172.19.0.4:55326] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.386538 2023] [core:alert] [pid 23] [client 172.19.0.4:55340] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.414008 2023] [core:alert] [pid 20] [client 172.19.0.4:55342] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.443277 2023] [core:alert] [pid 17] [client 172.19.0.4:55372] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.443417 2023] [core:alert] [pid 21] [client 172.19.0.4:55346] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.444104 2023] [core:alert] [pid 18] [client 172.19.0.4:55360] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.492620 2023] [core:alert] [pid 19] [client 172.19.0.4:55380] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.539762 2023] [core:alert] [pid 23] [client 172.19.0.4:55394] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.539966 2023] [core:alert] [pid 20] [client 172.19.0.4:55396] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.540153 2023] [core:alert] [pid 17] [client 172.19.0.4:55416] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.541378 2023] [core:alert] [pid 22] [client 172.19.0.4:55386] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.545641 2023] [core:alert] [pid 21] [client 172.19.0.4:55420] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.603314 2023] [core:alert] [pid 18] [client 172.19.0.4:55422] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.642515 2023] [core:alert] [pid 23] [client 172.19.0.4:55440] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.642518 2023] [core:alert] [pid 19] [client 172.19.0.4:55432] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.644330 2023] [core:alert] [pid 20] [client 172.19.0.4:55456] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.653014 2023] [core:alert] [pid 17] [client 172.19.0.4:55470] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.674742 2023] [core:alert] [pid 21] [client 172.19.0.4:55488] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.675035 2023] [core:alert] [pid 22] [client 172.19.0.4:55486] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.676340 2023] [core:alert] [pid 18] [client 172.19.0.4:55504] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.679865 2023] [core:alert] [pid 23] [client 172.19.0.4:55518] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.684898 2023] [core:alert] [pid 19] [client 172.19.0.4:55530] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.708964 2023] [core:alert] [pid 20] [client 172.19.0.4:55536] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.712482 2023] [core:alert] [pid 17] [client 172.19.0.4:55548] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.717735 2023] [core:alert] [pid 18] [client 172.19.0.4:55554] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.720811 2023] [core:alert] [pid 22] [client 172.19.0.4:55564] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.725858 2023] [core:alert] [pid 21] [client 172.19.0.4:55574] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.745011 2023] [core:alert] [pid 23] [client 172.19.0.4:55580] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.752320 2023] [core:alert] [pid 19] [client 172.19.0.4:55592] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.753405 2023] [core:alert] [pid 20] [client 172.19.0.4:55596] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.754386 2023] [core:alert] [pid 17] [client 172.19.0.4:55610] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.760698 2023] [core:alert] [pid 18] [client 172.19.0.4:55616] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.787416 2023] [core:alert] [pid 22] [client 172.19.0.4:55622] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.795105 2023] [core:alert] [pid 19] [client 172.19.0.4:55642] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.795146 2023] [core:alert] [pid 21] [client 172.19.0.4:55638] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.796352 2023] [core:alert] [pid 23] [client 172.19.0.4:55656] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.801310 2023] [core:alert] [pid 20] [client 172.19.0.4:55660] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.816844 2023] [core:alert] [pid 17] [client 172.19.0.4:55674] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.825938 2023] [core:alert] [pid 18] [client 172.19.0.4:55690] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.826812 2023] [core:alert] [pid 22] [client 172.19.0.4:55700] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.857662 2023] [core:alert] [pid 19] [client 172.19.0.4:55714] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.893867 2023] [core:alert] [pid 17] [client 172.19.0.4:55766] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.894090 2023] [core:alert] [pid 20] [client 172.19.0.4:55730] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.894128 2023] [core:alert] [pid 21] [client 172.19.0.4:55726] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.894185 2023] [core:alert] [pid 18] [client 172.19.0.4:55728] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.895134 2023] [core:alert] [pid 23] [client 172.19.0.4:55764] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.929828 2023] [core:alert] [pid 22] [client 172.19.0.4:55782] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:50.968429 2023] [core:alert] [pid 19] [client 172.19.0.4:55798] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 05:59:52.891789 2023] [core:alert] [pid 17] [client 172.19.0.1:39840] /var/www/html/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+[Fri Mar 10 06:00:09.824045 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully

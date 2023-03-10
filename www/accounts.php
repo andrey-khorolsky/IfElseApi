@@ -32,7 +32,7 @@ function getAccountById($connect, $id){
 function getSearchAccount($connect){
 
     //запрос и кол-во параметров
-    $query = "SELECT `id`, `firstName`, `lastName`, `email` FROM `accounts` WHERE ";
+    $query = "SELECT `id`, `firstName`, `lastName`, `email` FROM `accounts`";
     $first = false;
 
     //переменные по дефолту
@@ -57,17 +57,23 @@ function getSearchAccount($connect){
 
     //создание запроса в зависимости от реквеста
     if (isset($firstName)){
-        $query .= "`firstName` LIKE '%$firstName%' ";
+        $query .= " WHERE `firstName` LIKE '%$firstName%' ";
         $first = true;
     }
     if (isset($lastName)){
         if ($first) $query .= " AND ";
-        else $first = true;
+        else {
+            $query .= " WHERE ";
+            $first = true;
+        }
         $query .= "`lastName` LIKE '%$lastName%' ";
     }
     if (isset($email)){
         if ($first) $query .= " AND ";
-        else $first = true;
+        else {
+            $query .= " WHERE ";
+            $first = true;
+        }
         $query .= "`email` LIKE '%$email%' ";
     }
 
@@ -97,13 +103,13 @@ function deleteAccountById($connect, $id){
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (notAuthorize() || validAuthorize($connect)){
         giveError(401, "Authorization error");
         return;
     }
 
     // Удаление не своего акк, Аккаунт с таким accountId не найден - 403
-    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `id` = '$id'")) === 0){
+    if (notYourAccount($connect, $id) || (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `id` = '$id'")) === 0)){
         giveError(403, "Account not found");
         return;
     }
@@ -133,13 +139,13 @@ function updateAccount($connect, $id){
 
 
     //Запрос от неавторизованного аккаунта, Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (notAuthorize() || validAuthorize($connect)){
         giveError(401, "Authorization error");
         return;
     }
 
     //Обновление не своего аккаунта, Аккаунт не найден - 403
-    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `email` = (SELECT `email` FROM `accounts` WHERE `id` = '$id')")) === 0){
+    if (notYourAccount($connect, $id) || (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `email` = (SELECT `email` FROM `accounts` WHERE `id` = '$id')"))) === 0){
         giveError(409, "Old account not found");
         return;
     }
