@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 10 2023 г., 21:37
+-- Время создания: Мар 11 2023 г., 20:47
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `accounts` (
   `id` int NOT NULL,
-  `firstName` varchar(50) NOT NULL,
-  `lastName` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `firstName` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `lastName` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `email` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `password` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -58,7 +58,7 @@ CREATE TABLE `animals` (
   `weight` float NOT NULL,
   `length` float NOT NULL,
   `height` float NOT NULL,
-  `gender` text NOT NULL,
+  `gender` varchar(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `lifeStatus` varchar(5) NOT NULL DEFAULT 'ALIVE',
   `chippingDateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `chipperId` int NOT NULL,
@@ -139,7 +139,9 @@ INSERT INTO `locations` (`id`, `latitude`, `longitude`) VALUES
 (1, 89, 12),
 (2, 67, 67),
 (3, 89, 68),
-(4, 56, 28);
+(4, 56, 28),
+(7, 71.2334564, 23.4536453),
+(8, -17.4563564, 22.94655697719939);
 
 -- --------------------------------------------------------
 
@@ -149,7 +151,7 @@ INSERT INTO `locations` (`id`, `latitude`, `longitude`) VALUES
 
 CREATE TABLE `types` (
   `id` bigint NOT NULL,
-  `type` text NOT NULL
+  `type` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -217,7 +219,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT для таблицы `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT для таблицы `animals`
@@ -235,7 +237,7 @@ ALTER TABLE `animal_locations`
 -- AUTO_INCREMENT для таблицы `locations`
 --
 ALTER TABLE `locations`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `types`
