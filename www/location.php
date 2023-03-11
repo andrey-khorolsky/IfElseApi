@@ -30,9 +30,12 @@ function getLocationById($connect, $id){
 
 //API 3.2: Добавление точки локации животных
 function addLocation($connect){
+    
+    $data = file_get_contents("php://input");
+    $data = json_decode($data, true);
 
-    $latitude = $_POST["latitude"] ?? null;
-    $longitude = $_POST["longitude"] ?? null;
+    $latitude = $_POST["latitude"] ?? ($data["latitude"] ?? null);
+    $longitude = $_POST["longitude"] ?? ($data["latitude"] ?? null);
 
     //невалидные координаты 
     if (validCoordinates($latitude, $longitude)){
