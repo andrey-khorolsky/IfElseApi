@@ -25,9 +25,15 @@ function dateTimeIso($datetime){
 
 
 //валидация данных. all right -> false
-function validData(...$data){
-    foreach ($data as $d)
-        if (trim($d) === "" || is_null($d)) return true;
+function validData($firstName, $lastName, $password){
+    
+    if (is_null($firstName) || trim($firstName) === "") return true;
+    if (is_null($lastName) || trim($lastName) === "") return true;
+    if (is_null($password) || trim($password) === "") return true;
+    // foreach ($data as $d){
+    //     echo $d;
+    //     if (trim($d) === "" || is_null($d)) return true;
+    // }
     return false;
 }
 
@@ -35,7 +41,7 @@ function validData(...$data){
 //валидация почты. all right -> false
 function validEmail($email){
     $reg = "/^([a-zA-Z0-9]+[a-zA-Z0-9._-]+[a-zA-Z0-9]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,})$/";
-    if (preg_match($reg, $email) !== 1) return true;
+        if (preg_match($reg, $email) === 1) return true;
     return false;
 }
 
@@ -69,8 +75,8 @@ function validAuthorize($connect){
 
 //проверка авторизации. all right -> false
 function notAuthorize(){
-    if (isset(getallheaders()["Authorization"])) return false;
-    return true;
+    // if (isset(getallheaders()["Authorization"])) return false;
+    // return true;
 }
 
 //проверка на доступ к чужему аккаунту. all right -> false

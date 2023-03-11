@@ -33,7 +33,7 @@ function getAnimalById($connect, $id){
 function getSearchAnimals($connect){
     
     //запрос и кол-во параметров
-    $query = "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime` FROM `animals` WHERE ";
+    $query = "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime` FROM `animals`";
     $first = false;
 
     //переменные по дефолту
@@ -55,8 +55,8 @@ function getSearchAnimals($connect){
     // lifeStatus != “ALIVE”, “DEAD”,
     // gender != “MALE”, “FEMALE”, “OTHER”
     // 400
-    if ($from < 0 || $size <= 0 || $chipperId <= 0 || $chippingLocationId <= 0 || $lifeStatus !== ("ALIVE" || "DEAD")
-        || $gender !== ("MALE" or "FEMALE" or "OTHER") || dateTimeIso($startDateTime) || dateTimeIso($endDateTime)){
+    if ($from < 0 || $size <= 0 || (isset($chipperId) && $chipperId <= 0) || (isset($chippingLocationId) && $chippingLocationId <= 0) || checkLifestatus($lifeStatus)
+        || checkGender($gender) || dateTimeIso($startDateTime) || dateTimeIso($endDateTime)){
         giveError(400, "Bad request");
         return;
     }
@@ -70,32 +70,47 @@ function getSearchAnimals($connect){
 
     //создание запроса в зависимости от реквеста
     if (isset($startDateTime)){
-        $query .= "`chippingDateTime` >= '$startDateTime' ";
+        $query .= " WHERE `chippingDateTime` >= '$startDateTime' ";
         $first = true;
     }
     if (isset($endDateTime)){
         if ($first) $query .= " AND ";
-        else $first = true;
+        else{
+            $first = true;
+            $query .= " WHERE ";
+        }
         $query .= "`chippingDateTime` <= '$endDateTime' ";
     }
     if (isset($chipperId)){
         if ($first) $query .= " AND ";
-        else $first = true;
+        else{
+            $first = true;
+            $query .= " WHERE ";
+        }
         $query .= "`chipperId` = '$chipperId' ";
     }
     if (isset($chippingLocationId)){
         if ($first) $query .= " AND ";
-        else $first = true;
+        else{
+            $first = true;
+            $query .= " WHERE ";
+        }
         $query .= "`chippingLocationId` = '$chippingLocationId' ";
     }
     if (isset($lifeStatus)){
         if ($first) $query .= " AND ";
-        else $first = true;
+        else{
+            $first = true;
+            $query .= " WHERE ";
+        }
         $query .= "`lifeStatus` = '$lifeStatus' ";
     }
     if (isset($gender)){
         if ($first) $query .= " AND ";
-        else $first = true;
+        else{
+            $first = true;
+            $query .= " WHERE ";
+        }
         $query .= "`gender` = '$gender' ";
     }
 
@@ -128,15 +143,33 @@ function getAnimalsType($connect, $animal){
     
     //добавление типов в массив
     while ($type = mysqli_fetch_assoc($animal_types)){
-        array_push($typesList, array_values($type));
+        // array_push($typesList, array_values($type));
+        $typesList[] = array_values($type);
     }
-    $animal_types = ["animalTypes" => $typesList];
+    // $animal_types = ["animalTypes" => $typesList];
 
     //добавление локаций в массив
     while ($locations = mysqli_fetch_assoc($animal_locations)){
-        array_push($locationsList, array_values($locations));
+        // array_push($locationsList, array_values($locations));
+        $locationsList[] = array_values($locations);
     }
-    $animal_locations = ["visitedLocations" => $locationsList];
+    // $animal_locations = ["visitedLocations" => $locationsList];
 
-    return array_merge(array_slice($animal, 0, 1), $animal_types, array_slice($animal, 1, 8), $animal_locations, array_slice($animal, 8));
+    return array_merge(array_slice($animal, 0, 1), $typesList, array_slice($animal, 1, 8), $locationsList, array_slice($animal, 8));
+}
+
+
+//
+function checkGender($gender){
+    if (is_null($gender)) return false;
+    if (strcmp($gender, "MALE") == 0 || strcmp($gender, "FEMALE") == 0 || strcmp($gender, "OTHER") == 0) return false;
+    return true;
+}
+
+
+//
+function checkLifestatus($lifestatus){
+    if (is_null($lifestatus)) return false;
+    if (strcmp($lifestatus, "ALIVE") == 0 || strcmp($lifestatus, "DEAD") == 0) return false;
+    return true;
 }
