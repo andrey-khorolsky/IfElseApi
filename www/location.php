@@ -35,7 +35,7 @@ function addLocation($connect){
     $data = json_decode($data, true);
 
     $latitude = $_POST["latitude"] ?? ($data["latitude"] ?? null);
-    $longitude = $_POST["longitude"] ?? ($data["latitude"] ?? null);
+    $longitude = $_POST["longitude"] ?? ($data["longitude"] ?? null);
 
     //невалидные координаты 
     if (validCoordinates($latitude, $longitude)){
@@ -98,11 +98,11 @@ function changeLocation($connect, $id){
         return;
     }
 
-    mysqli_query($connect, "UPDATE `accounts` SET `latitude` = '$latitude', `longitude` = '$longitude' WHERE `id` = '$id'");
+    mysqli_query($connect, "UPDATE `locations` SET `latitude` = '$latitude', `longitude` = '$longitude' WHERE `id` = '$id'");
 
 
     echo json_encode([
-        "id" => mysqli_insert_id($connect),
+        "id" => $id,
         "latitude" => $latitude,
         "longitude" => $longitude
     ]);
