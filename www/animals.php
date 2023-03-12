@@ -202,7 +202,7 @@ function addAnimal($connect){
 }
 
 
-//поиск типов животного и добавление информации в результат
+//поиск типов и посещенных локаций животного и добавление информации в результат
 function getAnimalsType($connect, $animal){
     //берется id животного
     $id = $animal["id"];
@@ -215,19 +215,15 @@ function getAnimalsType($connect, $animal){
     
     //добавление типов в массив
     while ($type = mysqli_fetch_assoc($animal_types)){
-        array_push($typesList, array_values($type));
-        // $typesList[] = array_values($type);
+        $typesList[] = $type["id_type"];
     }
-    $animal_types = ["animalTypes" => $typesList];
 
     //добавление локаций в массив
     while ($locations = mysqli_fetch_assoc($animal_locations)){
-        array_push($locationsList, array_values($locations));
-        // $locationsList["visitedLocations"] = array_values($locations);
+        $locationsList[] = $locations["id_location"];
     }
-    $animal_locations = ["visitedLocations" => ($locationsList)];
-
-    return array_merge(array_slice($animal, 0, 1), $animal_types, array_slice($animal, 1, 8), $animal_locations, array_slice($animal, 8));
+    
+    return array_merge(array_slice($animal, 0, 1), ["animalTypes" => array_values($typesList)], array_slice($animal, 1, 8), ["visitedLocations" => ($locationsList)], array_slice($animal, 8));
 }
 
 
