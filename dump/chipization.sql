@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 11 2023 г., 20:47
+-- Время создания: Мар 12 2023 г., 21:07
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -60,10 +60,10 @@ CREATE TABLE `animals` (
   `height` float NOT NULL,
   `gender` varchar(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `lifeStatus` varchar(5) NOT NULL DEFAULT 'ALIVE',
-  `chippingDateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `chippingDateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `chipperId` int NOT NULL,
   `chippingLocationId` bigint NOT NULL,
-  `deathDateTime` datetime DEFAULT NULL
+  `deathDateTime` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -71,9 +71,9 @@ CREATE TABLE `animals` (
 --
 
 INSERT INTO `animals` (`id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime`) VALUES
-(1, 30, 0.7, 0.6, 'MALE', 'ALIVE', '2023-02-26 22:20:42', 1, 1, '2023-02-26 22:25:37'),
-(2, 40, 0.87, 0.9, 'FEMALE', 'ALIVE', '2023-02-26 22:36:38', 2, 2, NULL),
-(3, 120, 3.45, 0.14, 'MALE', 'ALIVE', '2023-02-26 22:38:27', 3, 3, NULL);
+(1, 30, 0.7, 0.6, 'MALE', 'ALIVE', '2023-02-26 19:20:42', 1, 1, '2023-02-26 19:25:37'),
+(2, 40, 0.87, 0.9, 'FEMALE', 'ALIVE', '2023-02-26 19:36:38', 2, 2, NULL),
+(3, 120, 3.45, 0.14, 'MALE', 'ALIVE', '2023-02-26 19:38:27', 3, 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -85,7 +85,7 @@ CREATE TABLE `animal_locations` (
   `id` bigint NOT NULL,
   `id_animal` bigint NOT NULL,
   `id_location` bigint NOT NULL,
-  `dateTimeOfVisitLocationPoint` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `dateTimeOfVisitLocationPoint` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -93,11 +93,11 @@ CREATE TABLE `animal_locations` (
 --
 
 INSERT INTO `animal_locations` (`id`, `id_animal`, `id_location`, `dateTimeOfVisitLocationPoint`) VALUES
-(1, 1, 1, '2023-03-01 10:40:16'),
-(2, 1, 3, '2023-03-01 10:40:30'),
-(3, 2, 1, '2023-03-01 10:35:30'),
-(4, 2, 3, '2023-03-01 10:50:00'),
-(5, 3, 1, '2023-03-01 10:45:16');
+(1, 1, 1, '2023-03-01 07:40:16'),
+(2, 1, 3, '2023-03-01 07:40:30'),
+(3, 2, 1, '2023-03-01 07:35:30'),
+(4, 2, 3, '2023-03-01 07:50:00'),
+(5, 3, 1, '2023-03-01 07:45:16');
 
 -- --------------------------------------------------------
 
