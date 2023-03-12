@@ -50,7 +50,7 @@ function addAnimalType($connect){
         return;
     }
 
-    mysqli_query($connect, "INSERT INTO `types`  (`id`, `type`) VALUES (null, '$type')");
+    mysqli_query($connect, "INSERT INTO `types` (`id`, `type`) VALUES (null, '$type')");
     http_response_code(201);
     echo json_encode([
         "id" => mysqli_insert_id($connect),

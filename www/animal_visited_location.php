@@ -1,6 +1,6 @@
 <?php
 
-//API 6.1: Просмотр точек локации, посещенных животным
+//GET API 6.1: Просмотр точек локации, посещенных животным
 function getVisitedLocations($connect, $id){
     
     $query = "SELECT `id`, `dateTimeOfVisitLocationPoint`, `id_location` FROM `animal_locations` WHERE `id_animal` = '$id'";

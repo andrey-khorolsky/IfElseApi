@@ -1,7 +1,7 @@
 <?php
 
 
-//API 2.1: Получение информации об аккаунте пользователя
+//GET API 2.1: Получение информации об аккаунте пользователя
 function getAccountById($connect, $id){
     //запрос в бд
     $accaount = mysqli_query($connect, "SELECT `id`, `firstName`, `lastName`, `email` FROM `accounts` WHERE `id` = '$id'");
@@ -28,7 +28,7 @@ function getAccountById($connect, $id){
     echo json_encode($accaount);
 }
 
-//API 2.2: Поиск аккаунтов пользователей по параметрам
+//GET API 2.2: Поиск аккаунтов пользователей по параметрам
 function getSearchAccount($connect){
 
     //запрос и кол-во параметров
@@ -93,7 +93,7 @@ function getSearchAccount($connect){
 }
 
 
-//API 2.3: Обновление данных аккаунта пользователя
+//PUT API 2.3: Обновление данных аккаунта пользователя
 function updateAccount($connect, $id){
 
     $newData = file_get_contents("php://input");
@@ -141,7 +141,7 @@ function updateAccount($connect, $id){
 }
 
 
-//API 2.4: Удаление аккаунта пользователя
+//DELETE API 2.4: Удаление аккаунта пользователя
 function deleteAccountById($connect, $id){
 
     //accountId = null, accountId <= 0, Аккаунт связан с животным - 400

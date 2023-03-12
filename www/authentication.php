@@ -1,6 +1,6 @@
 <?php
 
-//API 1.1: Регистрация нового аккаунта
+//POST API 1.1: Регистрация нового аккаунта
 function registrationAccount($connect){
     
     $data = file_get_contents("php://input");
