@@ -24,6 +24,15 @@ function dateTimeIso($datetime){
 }
 
 
+//валидация численных значений. all right -> flase
+function validDidgitData(...$data){
+    foreach ($data as $d){
+        if (is_null($d) || $d <= 0) return true;
+    }
+    return false;
+}
+
+
 //валидация данных. all right -> false
 function validData(...$data){
     foreach ($data as $d){
@@ -77,7 +86,9 @@ function notAuthorize(){
 
 //проверка на доступ к чужему аккаунту. all right -> false
 function notYourAccount($connect, $id){
-    $acc = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `email`, `password` FROM `accounts` WHERE `id` = '$id'"));
+    $acc = mysqli_query($connect, "SELECT `email`, `password` FROM `accounts` WHERE `id` = '$id'");
+    if (mysqli_num_rows($acc) !== 1) return true;
+    $acc = mysqli_fetch_assoc($acc);
 
     $authorization = getallheaders()["Authorization"];
     $authorization = substr($authorization, stripos($authorization, " ")+1); //login:pass (in base64)
