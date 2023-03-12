@@ -1,6 +1,6 @@
 <?php
 
-//API 4.1: Получение информации о типе животного
+//GET API 4.1: Получение информации о типе животного
 function getAnimalTypeById($connect, $id){
     //запрос в бд
     $animal_types = mysqli_query($connect, "SELECT `id`, `type` FROM `types` WHERE `id` = '$id'");
@@ -25,4 +25,35 @@ function getAnimalTypeById($connect, $id){
 
     $animal_types = mysqli_fetch_assoc($animal_types);
     echo json_encode($animal_types);
+}
+
+
+//POST API 4.2: Добавление типа животного
+function addAnimalType($connect){
+    $data = file_get_contents("php://input");
+    $data = json_decode($data, true);
+
+    $type = $_POST["type"] ?? ($data["type"] ?? null);
+
+    if (validData($type)){
+        giveError(400, "Invalid data");
+        return;
+    }
+
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
+
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `types` WHERE `type` = '$type'")) !== 0){
+        giveError(409, "This type already exists");
+        return;
+    }
+
+    mysqli_query($connect, "INSERT INTO `types`  (`id`, `type`) VALUES (null, '$type')");
+    http_response_code(201);
+    echo json_encode([
+        "id" => mysqli_insert_id($connect),
+        "type" => $type
+    ]);
 }
