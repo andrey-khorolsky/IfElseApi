@@ -16,7 +16,8 @@ function dateTimeIso($datetime){
     if ($datetime == null) return false;
     try{
         $date = date_create($datetime);
-        date_format($date, 'Y-m-d H:i:s');
+        // date_format($date, 'Y-m-d H:i:s');
+        date(DATE_ISO8601, strtotime($date));
     } catch(Throwable){
         return true;
     }

@@ -3,7 +3,7 @@
 //GET API 5.1: Получение информации о животном
 function getAnimalById($connect, $id){
     //запрос в бд
-    $animal = mysqli_query($connect, "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime` FROM `animals` WHERE `id` = '$id'");
+    $animal = mysqli_query($connect, "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, DATE_FORMAT(`chippingDateTime`, '%Y-%m-%dT%T+03:00') as chippingDateTime, `chipperId`, `chippingLocationId`, DATE_FORMAT(`deathDateTime`, '%Y-%m-%dT%T+03:00') as deathDateTime FROM `animals` WHERE `id` = '$id'");
     
     //неверный id - 400
     if ($id <= 0 || $id == null){
@@ -33,7 +33,7 @@ function getAnimalById($connect, $id){
 function getSearchAnimals($connect){
     
     //запрос и кол-во параметров
-    $query = "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime` FROM `animals`";
+    $query = "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, DATE_FORMAT(`chippingDateTime`, '%Y-%m-%dT%T+03:00') as chippingDateTime, `chipperId`, `chippingLocationId`, DATE_FORMAT(`deathDateTime`, '%Y-%m-%dT%T+03:00') as deathDateTime FROM `animals`";
     $first = false;
 
     //переменные по дефолту
@@ -189,14 +189,14 @@ function addAnimal($connect){
     }
 
     //добавление животного в бд
-    mysqli_query($connect, "INSERT INTO `animals` (`id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime`) VALUES (NULL, '$weight', '$length', '$height', '$gender', 'ALIVE', CURRENT_TIMESTAMP, '$chipperId', '$chippingLocationId', NULL)");
+    mysqli_query($connect, "INSERT INTO `animals` (`id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime`) VALUES (NULL, '$weight', '$length', '$height', '$gender', 'ALIVE', DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%dT%T'), '$chipperId', '$chippingLocationId', NULL)");
     //добавление типов к животному в бд
     $animalId = mysqli_insert_id($connect);
     foreach (array_values($animalTypes) as $type)
         mysqli_query($connect, "INSERT INTO `animal_types` (`id_animal`, `id_type`) VALUES ('$animalId', '$type')");
 
     http_response_code(201);
-    $animal = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime` FROM `animals` WHERE `id` = '$animalId'"));
+    $animal = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, DATE_FORMAT(`chippingDateTime`, '%Y-%m-%dT%T+03:00') as chippingDateTime, `chipperId`, `chippingLocationId`, DATE_FORMAT(`deathDateTime`, '%Y-%m-%dT%T+03:00') as deathDateTime FROM `animals` WHERE `id` = '$animalId'"));
     echo json_encode(getAnimalsType($connect, $animal));
 
 }
