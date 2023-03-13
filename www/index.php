@@ -14,10 +14,6 @@ header("Content-type: application/json");
 $method = $_SERVER["REQUEST_METHOD"];
 $q = $_GET["q"];
 $page = explode("/", $q);
-// $page = [];
-// for ($i = 0; $i < count($params); $i++){
-//     $page[] = $params[$i];
-// }
 
 
 if ($page[0] === "accounts"){

@@ -89,6 +89,11 @@ function getSearchAccount($connect){
         if (--$size === 0) break;
     }
 
+    foreach ($accountList as $acc){
+        $acc["firstName"] = mysqli_real_escape_string($connect, $acc["firstName"]);
+        $acc["lastName"] = mysqli_real_escape_string($connect, $acc["lastName"]);
+        $acc["email"] = mysqli_real_escape_string($connect, $acc["email"]);
+    }
     echo json_encode($accountList);
 }
 
@@ -119,13 +124,13 @@ function updateAccount($connect, $id){
     }
 
     //Обновление не своего аккаунта, Аккаунт не найден - 403
-    if (notYourAccount($connect, $id) || (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `email` = (SELECT `email` FROM `accounts` WHERE `id` = '$id')"))) === 0){
-        giveError(409, "Old account not found");
+    if (notYourAccount($connect, $id) || (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `email` = (SELECT `email` FROM `accounts` WHERE `id` = '$id')")) === 0)){
+        giveError(403, "Old account not found");
         return;
     }
 
     //Аккаунт с таким email уже существует - 409
-    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `email` = '$email'")) !== 0){
+    if (notYourAccount($connect, $id) && mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `email` = '$email'")) !== 1){
         giveError(409, "This email is used");
         return;
     }
