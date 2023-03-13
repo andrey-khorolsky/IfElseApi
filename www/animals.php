@@ -208,14 +208,6 @@ function updateAnimal($connect, $id){
     $newAnimalData = file_get_contents("php://input");
     $newAnimalData = json_decode($newAnimalData, true);
 
-    // "weight": "float", // Масса животного, кг
-    // "length": "float", // Длина животного, м
-    // "height": "float", // Высота животного, м
-    // "gender": "string", // Гендерный признак животного,
-    // "lifeStatus": "string", // Жизненный статус животного,
-    // "chipperId": "int", // Идентификатор аккаунта
-    // "chippingLocationId": "long"
-
     $weight = $_POST["weight"] ?? ($newAnimalData["weight"] ?? null);
     $length = $_POST["length"] ?? ($newAnimalData["length"] ?? null);
     $height = $_POST["height"] ?? ($newAnimalData["height"] ?? null);
@@ -223,14 +215,6 @@ function updateAnimal($connect, $id){
     $lifeStatus = $_POST["lifeStatus"] ?? ($newAnimalData["lifeStatus"] ?? null);
     $chipperId = $_POST["chipperId"] ?? ($newAnimalData["chipperId"] ?? null);
     $chippingLocationId = $_POST["chippingLocationId"] ?? ($newAnimalData["chippingLocationId"] ?? null);
-
-    //Животное с animalId не найдено. Аккаунт с chipperId не найден. Точка локации с chippingLocationId не найдена - 404
-    if ((mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = '$id'")) !== 1)
-    || (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `accounts` WHERE `id` = '$chipperId'")) !== 1)
-    || (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `locations` WHERE `id` = '$chippingLocationId'")) !== 1)){
-        giveError(404, "Animal or account or location not found");
-        return;
-    }
 
     //animalId = null, animalId <=0,
     // weight = null, weight <=0,
@@ -240,13 +224,28 @@ function updateAnimal($connect, $id){
     // chippingLocationId = null, chippingLocationId <=0
     // gender != “MALE”, “FEMALE”, “OTHER”,
     // lifeStatus != “ALIVE”, “DEAD”,
+    // - 400
+    if (validDidgitData($id, $weight, $length, $height, $chipperId, $chippingLocationId) || validGender($gender) || validLifestatus($lifeStatus)){
+        giveError(400, "Invalid data");
+        return;
+    }
+
+    //Животное с animalId не найдено. Аккаунт с chipperId не найден. Точка локации с chippingLocationId не найдена - 404
+    if ((mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = '$id'")) !== 1)
+    || (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `accounts` WHERE `id` = '$chipperId'")) !== 1)
+    || (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `locations` WHERE `id` = '$chippingLocationId'")) !== 1)){
+        giveError(404, "Animal or account or location not found");
+        return;
+    }
+
+    
     // Установка lifeStatus = “ALIVE”, если у животного lifeStatus = “DEAD”
     // Новая точка чипирования совпадает с первой посещенной точкой локации
     // - 400
     $currentLifeStatus = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `lifeStatus` FROM `animals` WHERE `id` = '$id'"))["lifeStatus"];
     $firstLocation = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `id_location` FROM `animal_locations` WHERE `id` = '$id'")) ?? -1;
-    if (validDidgitData($id, $weight, $length, $height, $chipperId, $chippingLocationId) || validGender($gender) || validLifestatus($lifeStatus)
-    || ($currentLifeStatus === "DEAD" && $lifeStatus === "ALIVE") || $firstLocation === $chippingLocationId){
+    
+    if (($currentLifeStatus === "DEAD" && $lifeStatus === "ALIVE") || $firstLocation === $chippingLocationId){
         giveError(400, "Invalid data");
         return;
     }
@@ -262,6 +261,31 @@ function updateAnimal($connect, $id){
     echo json_encode(getAnimalsType($connect, $animal));
 }
 
+
+//DELETE API 5.5: Удаление животного
+function deleteAnimal($connect, $id){
+
+    //animalId = null, animalId <=0. Животное покинуло локацию чипирования, при этом есть другие посещенные точки - 400
+    if (is_null($id) || $id <= 0 || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animal_locations` WHERE `id_animal` = '$id'")) !== 0){
+        giveError(400, "Invalid data");
+        return;
+    }
+
+    //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
+    if (validAuthorize($connect, true)){
+        giveError(401, "Authorziation error");
+        return;
+    }
+
+    //Животное с animalId не найдено - 404
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = '$id'")) !== 1){
+        giveError(404, "Animal not found");
+        return;
+    }
+
+    mysqli_query($connect, "DELETE FROM `animals` WHERE `id` = '$id'");
+
+}
 
 //поиск типов и посещенных локаций животного и добавление информации в результат
 function getAnimalsType($connect, $animal){

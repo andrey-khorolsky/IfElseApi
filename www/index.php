@@ -52,6 +52,8 @@ if ($page[0] === "accounts"){
             addAnimal($connect);
         elseif ($method === "PUT")
             updateAnimal($connect, $page[1]);
+        elseif ($method === "DELETE")
+            deleteAnimal($connect, $page[1]);
 } elseif ($page[0] === "locations"){
     if ($method === "DELETE")
         deleteLocationById($connect, $page[1]);
