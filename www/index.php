@@ -38,6 +38,10 @@ if ($page[0] === "accounts"){
             getAnimalTypeById($connect, $page[2]);
         elseif ($method === "POST")
             addAnimalType($connect);
+        elseif ($method === "PUT")
+            updateAnimalType($connect, $page[2]);
+        elseif ($method === "DELETE")
+            deleteAnimalType($connect, $page[2]);
         }
     elseif (isset($page[1]) && $page[1] === "search")
         getSearchAnimals($connect);

@@ -60,3 +60,58 @@ function addAnimalType($connect){
         "type" => $type
     ]);
 }
+
+
+//PUT API 4.3: Изменение типа животного
+function updateAnimalType($connect, $id){
+    
+    $data = file_get_contents("php://input");
+    $data = json_decode($data, true);
+
+    $type = $_POST["type"] ?? ($data["type"] ?? null);
+
+    //typeId <= 0,
+    // typeId = null,
+    // type = null,
+    // type = "" или состоит из пробелов - 400
+    if ($id <= 0 || is_null($id) || is_null($type) || trim($type) == ""){
+        giveError(400, "Invalid data");
+        return;
+    }
+
+    //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
+    if (validAuthorize($connect, true)){
+        giveError(401, "Authorization error");
+        return;
+    }
+
+    //Тип животного с таким typeId не найден - 404
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `types` WHERE `id` = '$id'")) !== 1){
+        giveError(404, "Animals type not found");
+        return;
+    }
+
+    //Тип животного с таким type уже существует - 409
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `types` WHERE `type` = '$type'")) !== 0){
+        giveError(409, "This type is exists");
+        return;
+    }
+
+    mysqli_query($connect, "UPDATE `types` SET `type` = '$type' WHERE `id` = '$id'");
+    echo json_encode([
+        "id" => $id,
+        "type" => $type
+    ]);
+}
+
+
+//DELETE API 4.4: Удаление типа животного
+function deleteAnimalType($connect, $id){
+
+    //typeId = null, typeId <= 0, Есть животные с типом с typeId - 400
+    if (is_null($id) || $id <= 0 || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animal_types` WHERE `id_type` = '$id'")) !== 0){
+        giveError(400, "Invalid data or one of animals has this type");
+        return;
+    }
+
+}
