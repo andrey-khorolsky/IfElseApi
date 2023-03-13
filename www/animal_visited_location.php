@@ -54,3 +54,42 @@ function getVisitedLocations($connect, $id){
 
     echo json_encode($locationsList);
 }
+
+
+//POST API 6.2: Добавление точки локации, посещенной животным
+function addVisitedLocationToAnimal($connect, $animalId, $locationId){
+
+    //animalId = null, animalId <= 0,
+    // pointId= null, pointId <= 0,
+    // У животного lifeStatus = "DEAD"
+    // Животное находится в точке чипирования и никуда не перемещалось, попытка добавить точку локации, равную точке чипирования.
+    // Попытка добавить точку локации, в которой уже находится животное
+    if (validDidgitData($animalId, $locationId)
+    || strcmp(mysqli_fetch_assoc(mysqli_query($connect, "SELECT `lifeStatus` FROM `animals` WHERE `id` = '$animalId'"))["lifeStatus"], "DEAD")
+    || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animal_locations` WHERE `id_animal` = '$animalId' AND `id_location` = '$locationId'")) !== 0){
+        giveError(400, "Invalid data");
+        return;
+    }
+
+    //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
+    if (validAuthorize($connect)){
+        giveError(401, "Authorization error");
+        return;
+    }
+
+    //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 404
+    if ((mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = '$animalId'")) !== 1)
+    || (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `locations` WHERE `id` = '$locationId'")) !== 1)){
+        giveError(404, "Animal or location not found");
+        return;
+    }
+
+    mysqli_query($connect, "INSERT INTO `animal_locations` (`id`, `id_animal`, `id_location`, `dateTimeOfVisitLocationPoint`) VALUES (null, '$animalId', '$locationId',  DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%dT%T+03:00'))");
+    http_response_code(201);
+    $id = mysqli_insert_id($connect);
+    echo json_encode([
+        "id" => $id,
+        "dateTimeOfVisitLocationPoint" => mysqli_fetch_assoc(mysqli_query($connect, "SELECT `dateTimeOfVisitLocationPoint` FROM `animal_locations` WHERE `id` = '$id'"))["dateTimeOfVisitLocationPoint"],
+        "locationPointId" => $locationId
+    ]);
+}
