@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 12 2023 г., 21:07
+-- Время создания: Мар 13 2023 г., 17:29
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -71,9 +71,10 @@ CREATE TABLE `animals` (
 --
 
 INSERT INTO `animals` (`id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime`) VALUES
-(1, 30, 0.7, 0.6, 'MALE', 'ALIVE', '2023-02-26 19:20:42', 1, 1, '2023-02-26 19:25:37'),
+(1, 30, 0.7, 0.6, 'MALE', 'ALIVE', '2023-03-08 06:51:51', 1, 1, NULL),
 (2, 40, 0.87, 0.9, 'FEMALE', 'ALIVE', '2023-02-26 19:36:38', 2, 2, NULL),
-(3, 120, 3.45, 0.14, 'MALE', 'ALIVE', '2023-02-26 19:38:27', 3, 3, NULL);
+(3, 120, 3.45, 0.14, 'MALE', 'ALIVE', '2023-02-26 19:38:27', 3, 3, NULL),
+(4, 20, 50, 54, 'MALE', 'ALIVE', '2023-03-13 06:54:41', 1, 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -97,7 +98,9 @@ INSERT INTO `animal_locations` (`id`, `id_animal`, `id_location`, `dateTimeOfVis
 (2, 1, 3, '2023-03-01 07:40:30'),
 (3, 2, 1, '2023-03-01 07:35:30'),
 (4, 2, 3, '2023-03-01 07:50:00'),
-(5, 3, 1, '2023-03-01 07:45:16');
+(5, 3, 1, '2023-03-01 07:45:16'),
+(6, 4, 1, '2023-03-13 14:29:02'),
+(7, 4, 2, '2023-03-13 14:29:08');
 
 -- --------------------------------------------------------
 
@@ -225,13 +228,13 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT для таблицы `animals`
 --
 ALTER TABLE `animals`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `animal_locations`
 --
 ALTER TABLE `animal_locations`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `locations`
