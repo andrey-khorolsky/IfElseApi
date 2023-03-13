@@ -96,7 +96,7 @@ function addVisitedLocationToAnimal($connect, $animalId, $locationId){
     $id = mysqli_insert_id($connect);
     echo json_encode([
         "id" => $id,
-        "dateTimeOfVisitLocationPoint" => mysqli_fetch_assoc(mysqli_query($connect, "SELECT `dateTimeOfVisitLocationPoint` FROM `animal_locations` WHERE `id` = '$id'"))["dateTimeOfVisitLocationPoint"],
+        "dateTimeOfVisitLocationPoint" => mysqli_fetch_assoc(mysqli_query($connect, "SELECT DATE_FORMAT(`dateTimeOfVisitLocationPoint`, '%Y-%m-%dT%T+03:00') as dateTimeOfVisitLocationPoint FROM `animal_locations` WHERE `id` = '$id'"))["dateTimeOfVisitLocationPoint"],
         "locationPointId" => $locationId
     ]);
 }
