@@ -19,7 +19,7 @@ function registrationAccount($connect){
 
     //Запрос от авторизованного аккаунта - 403
     if (isset(getallheaders()["Authorization"])){
-        giveError(401, "Authorization error");
+        giveError(403, "Authorization error");
         return;
     }
 

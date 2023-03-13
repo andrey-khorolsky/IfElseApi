@@ -59,13 +59,6 @@ function getVisitedLocations($connect, $id){
 //POST API 6.2: Добавление точки локации, посещенной животным
 function addVisitedLocationToAnimal($connect, $animalId, $locationId){
     
-    //Животное с animalId не найдено Точка локации с pointId не найдена - 404
-    if ((mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = '$animalId'")) !== 1)
-    || (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `locations` WHERE `id` = '$locationId'")) !== 1)){
-        giveError(404, "Animal or location not found");
-        return;
-    }
-
     //animalId = null, animalId <= 0,
     // pointId= null, pointId <= 0,
     // У животного lifeStatus = "DEAD"
@@ -75,6 +68,14 @@ function addVisitedLocationToAnimal($connect, $animalId, $locationId){
         giveError(400, "Invalid id");
         return;
     }
+
+    //Животное с animalId не найдено Точка локации с pointId не найдена - 404
+    if ((mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = '$animalId'")) !== 1)
+    || (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `locations` WHERE `id` = '$locationId'")) !== 1)){
+        giveError(404, "Animal or location not found");
+        return;
+    }
+
     if ((mysqli_fetch_assoc(mysqli_query($connect, "SELECT `lifeStatus` FROM `animals` WHERE `id` = '$animalId'"))["lifeStatus"] === "DEAD")){
         giveError(400, "Animal is dead");
         return;
@@ -90,6 +91,7 @@ function addVisitedLocationToAnimal($connect, $animalId, $locationId){
         giveError(401, "Authorization error");
         return;
     }
+
 
     mysqli_query($connect, "INSERT INTO `animal_locations` (`id`, `id_animal`, `id_location`, `dateTimeOfVisitLocationPoint`) VALUES (null, '$animalId', '$locationId',  DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%dT%T+03:00'))");
     http_response_code(201);

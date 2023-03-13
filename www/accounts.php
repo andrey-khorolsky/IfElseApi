@@ -25,6 +25,10 @@ function getAccountById($connect, $id){
     }
 
     $accaount = mysqli_fetch_assoc($accaount);
+    
+    $accaount["firstName"] = mysqli_real_escape_string($connect, $accaount["firstName"]);
+    $accaount["lastName"] = mysqli_real_escape_string($connect, $accaount["lastName"]);
+    $accaount["email"] = mysqli_real_escape_string($connect, $accaount["email"]);
     echo json_encode($accaount);
 }
 
