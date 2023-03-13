@@ -58,6 +58,13 @@ function getVisitedLocations($connect, $id){
 
 //POST API 6.2: Добавление точки локации, посещенной животным
 function addVisitedLocationToAnimal($connect, $animalId, $locationId){
+    
+    //Животное с animalId не найдено Точка локации с pointId не найдена - 404
+    if ((mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = '$animalId'")) !== 1)
+    || (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `locations` WHERE `id` = '$locationId'")) !== 1)){
+        giveError(404, "Animal or location not found");
+        return;
+    }
 
     //animalId = null, animalId <= 0,
     // pointId= null, pointId <= 0,
@@ -81,13 +88,6 @@ function addVisitedLocationToAnimal($connect, $animalId, $locationId){
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
     if (validAuthorize($connect, true)){
         giveError(401, "Authorization error");
-        return;
-    }
-
-    //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 404
-    if ((mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = '$animalId'")) !== 1)
-    || (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `locations` WHERE `id` = '$locationId'")) !== 1)){
-        giveError(404, "Animal or location not found");
         return;
     }
 
