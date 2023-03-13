@@ -118,7 +118,7 @@ function updateAccount($connect, $id){
 
 
     //Запрос от неавторизованного аккаунта, Неверные авторизационные данные - 401
-    if (notAuthorize() || validAuthorize($connect)){
+    if (validAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -156,7 +156,7 @@ function deleteAccountById($connect, $id){
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-    if (notAuthorize() || validAuthorize($connect)){
+    if (validAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }

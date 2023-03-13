@@ -64,15 +64,22 @@ function addVisitedLocationToAnimal($connect, $animalId, $locationId){
     // У животного lifeStatus = "DEAD"
     // Животное находится в точке чипирования и никуда не перемещалось, попытка добавить точку локации, равную точке чипирования.
     // Попытка добавить точку локации, в которой уже находится животное
-    if (validDidgitData($animalId, $locationId)
-    || strcmp(mysqli_fetch_assoc(mysqli_query($connect, "SELECT `lifeStatus` FROM `animals` WHERE `id` = '$animalId'"))["lifeStatus"], "DEAD")
-    || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animal_locations` WHERE `id_animal` = '$animalId' AND `id_location` = '$locationId'")) !== 0){
-        giveError(400, "Invalid data");
+    if (validDidgitData($animalId, $locationId)){
+        giveError(400, "Invalid id");
+        return;
+    }
+    if ((mysqli_fetch_assoc(mysqli_query($connect, "SELECT `lifeStatus` FROM `animals` WHERE `id` = '$animalId'"))["lifeStatus"] === "DEAD")){
+        giveError(400, "Animal is dead");
+        return;
+    }
+    // || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animal_locations` WHERE `id_animal` = '$animalId' AND `id_location` = '$locationId'")) !== 0
+    if (mysqli_fetch_assoc(mysqli_query($connect, "SELECT `chippingLocationId` FROM `animals` WHERE `id` = '$animalId'"))["chippingLocationId"] == $locationId){
+        giveError(400, "Animal in chipping location");
         return;
     }
 
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (validAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }

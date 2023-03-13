@@ -62,10 +62,17 @@ function validCoordinates($latitude, $longitude){
     return false;
 }
 
+
 //проверка авторизационных данных. all right -> false
-function validAuthorize($connect){
+function validAuthorize($connect, bool $necessity = false){
     
-    if (is_null($authorization = getallheaders()["Authorization"] ?? null)) return false;
+    $authorization = getallheaders()["Authorization"] ?? null;
+    //проверка на необходимость авторизации при отсутствии хедера
+    if (is_null($authorization))
+        if (!$necessity)
+            return false;
+        else
+            return true;
 
     $authorization = substr($authorization, stripos($authorization, " ")+1); //login:pass (in base64)
     $authorization = base64_decode($authorization);  //login:pass (in unicode)
@@ -79,11 +86,6 @@ function validAuthorize($connect){
     return false;
 }
 
-//проверка авторизации. all right -> false
-function notAuthorize(){
-    // if (isset(getallheaders()["Authorization"])) return false;
-    // return true;
-}
 
 //проверка на доступ к чужему аккаунту. all right -> false
 function notYourAccount($connect, $id){

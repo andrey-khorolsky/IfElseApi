@@ -44,7 +44,7 @@ function addLocation($connect){
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-    if (notAuthorize() || validAuthorize($connect)){
+    if (validAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -81,7 +81,7 @@ function changeLocation($connect, $id){
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-    if (notAuthorize() || validAuthorize($connect)){
+    if (validAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -119,7 +119,7 @@ function deleteLocationById($connect, $id){
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-    if (notAuthorize() || validAuthorize($connect)){
+    if (validAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }

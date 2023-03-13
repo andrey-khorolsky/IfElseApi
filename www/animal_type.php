@@ -35,16 +35,19 @@ function addAnimalType($connect){
 
     $type = $_POST["type"] ?? ($data["type"] ?? null);
 
+    //type = null, type = "" или состоит из пробелов - 400
     if (validData($type)){
         giveError(400, "Invalid data");
         return;
     }
-
-    if (validAuthorize($connect)){
+    
+    //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
+    if (validAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
 
+    //Тип животного с таким type уже существует - 409
     if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `types` WHERE `type` = '$type'")) !== 0){
         giveError(409, "This type already exists");
         return;

@@ -158,7 +158,7 @@ function addAnimal($connect){
     }
 
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (validAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -189,7 +189,7 @@ function addAnimal($connect){
     }
 
     //добавление животного в бд
-    mysqli_query($connect, "INSERT INTO `animals` (`id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime`) VALUES (NULL, '$weight', '$length', '$height', '$gender', 'ALIVE', DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%dT%T'), '$chipperId', '$chippingLocationId', NULL)");
+    mysqli_query($connect, "INSERT INTO `animals` (`id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime`) VALUES (NULL, '$weight', '$length', '$height', '$gender', 'ALIVE', DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%dT%T+03:00'), '$chipperId', '$chippingLocationId', NULL)");
     //добавление типов к животному в бд
     $animalId = mysqli_insert_id($connect);
     foreach (array_values($animalTypes) as $type)
