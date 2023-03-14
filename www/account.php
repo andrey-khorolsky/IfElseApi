@@ -1,6 +1,72 @@
 <?php
 
 
+$method = $_SERVER["REQUEST_METHOD"];
+$page = $_GET["q"];
+$page = explode("/", $page);
+require("database.php");
+require("common_function.php");
+
+
+if ($page[0] === "registration")
+    registrationAccount($connect);
+elseif ($page[1] === "search")
+    getSearchAccount($connect);
+elseif ($method === "DELETE")
+    deleteAccountById($connect, $page[1]);
+elseif ($method === "GET")
+    getAccountById($connect, $page[1]);
+elseif ($method === "PUT")
+    updateAccount($connect, $page[1]);
+
+
+    
+//POST API 1.1: Регистрация нового аккаунта
+function registrationAccount($connect){
+    
+    $data = file_get_contents("php://input");
+    $data = json_decode($data, true);
+
+    $firstName = $_POST["firstName"] ?? ($data["firstName"] ?? null);
+    $lastName = $_POST["lastName"] ?? ($data["lastName"] ?? null);
+    $email = $_POST["email"] ?? ($data["email"] ?? null);
+    $password = $_POST["password"] ?? ($data["password"] ?? null);
+
+    //валидация данных - 400
+    if (validData($firstName, $lastName, $password) || validEmail($email)){
+        giveError(400, "Invalid data");
+        return;
+    }
+
+    //Запрос от авторизованного аккаунта - 403
+    if (isset(getallheaders()["Authorization"])){
+        giveError(403, "Authorization error");
+        return;
+    }
+
+    //Аккаунт с таким email уже существует - 409
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `accounts` WHERE `email` = '$email'")) !== 0){
+        giveError(409, "This email is used");
+        return;
+    }
+
+    $firstName = mysqli_real_escape_string($connect, $firstName);
+    $lastName = mysqli_real_escape_string($connect, $lastName);
+    $email = mysqli_real_escape_string($connect, $email);
+    $password = mysqli_real_escape_string($connect, $password);
+
+    mysqli_query($connect, "INSERT INTO `accounts` (`id`, `firstName`, `lastName`, `email`, `password`) VALUES (null, '$firstName', '$lastName', '$email', '$password')");
+
+    http_response_code(201);
+    echo json_encode([
+        "id" => mysqli_insert_id($connect),
+        "firstName" => $firstName,
+        "lastName" => $lastName,
+        "email" => $email
+    ]);
+}
+
+
 //GET API 2.1: Получение информации об аккаунте пользователя
 function getAccountById($connect, $id){
     //запрос в бд
@@ -174,3 +240,4 @@ function deleteAccountById($connect, $id){
     mysqli_query($connect, "DELETE FROM `accounts` WHERE `id` = '$id'");
 
 }
+

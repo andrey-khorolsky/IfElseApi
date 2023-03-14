@@ -1,5 +1,23 @@
 <?php
 
+
+$method = $_SERVER["REQUEST_METHOD"];
+$page = $_GET["q"];
+$page = explode("/", $page);
+require("database.php");
+require("common_function.php");
+
+if (isset($page[1]) && $page[1] === "search")
+    getSearchAnimals($connect);
+elseif ($method === "GET")
+    getAnimalById($connect, $page[1]);
+elseif ($method === "POST")
+    addAnimal($connect);
+elseif ($method === "PUT")
+    updateAnimal($connect, $page[1]);
+elseif ($method === "DELETE")
+    deleteAnimal($connect, $page[1]);
+
 //GET API 5.1: Получение информации о животном
 function getAnimalById($connect, $id){
     //запрос в бд

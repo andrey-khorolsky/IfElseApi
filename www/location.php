@@ -1,5 +1,21 @@
 <?php
 
+
+$method = $_SERVER["REQUEST_METHOD"];
+$page = $_GET["q"];
+$page = explode("/", $page);
+require("database.php");
+require("common_function.php");
+
+if ($method === "DELETE")
+    deleteLocationById($connect, $page[1]);
+elseif ($method === "GET")
+    getLocationById($connect, $page[1]);
+elseif ($method === "POST")
+    addLocation($connect);
+elseif ($method === "PUT")
+    changeLocation($connect, $page[1]);
+
 //GET API 3.1: Получение информации о точке локации животных
 function getLocationById($connect, $id){
     //запрос в бд

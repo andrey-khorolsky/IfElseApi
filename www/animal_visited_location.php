@@ -1,5 +1,22 @@
 <?php
 
+
+$method = $_SERVER["REQUEST_METHOD"];
+$page = $_GET["q"];
+$page = explode("/", $page);
+require("database.php");
+require("common_function.php");
+
+if ($method === "GET")
+    getVisitedLocations($connect, $page[1]);
+elseif ($method === "POST")
+    addVisitedLocationToAnimal($connect, $page[1], $page[3]);
+elseif ($method === "PUT")
+    changeAnimalVisitedLocation($connect, $page[1]);
+elseif ($method === "DELETE")
+    deleteVisitedLocation($connect, $page[1], $page[3]);
+
+
 //GET API 6.1: Просмотр точек локации, посещенных животным
 function getVisitedLocations($connect, $id){
     

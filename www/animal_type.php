@@ -1,5 +1,21 @@
 <?php
 
+
+$method = $_SERVER["REQUEST_METHOD"];
+$page = $_GET["q"];
+$page = explode("/", $page);
+require("database.php");
+require("common_function.php");
+
+if ($method === "GET")
+    getAnimalTypeById($connect, $page[2]);
+elseif ($method === "POST")
+    addAnimalType($connect);
+elseif ($method === "PUT")
+    updateAnimalType($connect, $page[2]);
+elseif ($method === "DELETE")
+    deleteAnimalType($connect, $page[2]);
+
 //GET API 4.1: Получение информации о типе животного
 function getAnimalTypeById($connect, $id){
     //запрос в бд
