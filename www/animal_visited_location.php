@@ -143,11 +143,53 @@ function changeAnimalVisitedLocation($connect, $animalId){
         return;
     }
 
-    mysqli_query($connect, "UPDATE `animal_location` SET `id_location` = '$locationPointId'");
+    mysqli_query($connect, "UPDATE `animal_locations` SET `id_location` = '$locationPointId'");
     echo json_encode([
         "id" => $visitedLocationPointId,
-        "dateTimeOfVisitLocationPoint" => mysqli_fetch_assoc(mysqli_query($connect, "SELECT `dateTimeOfVisitLocationPoint` FROM `animal_location` WHERE `id` = '$visitedLocationPointId'"))["visitedLocationPointId"],
+        "dateTimeOfVisitLocationPoint" => mysqli_fetch_assoc(mysqli_query($connect, "SELECT DATE_FORMAT(`dateTimeOfVisitLocationPoint`, '%Y-%m-%dT%T+03:00') as dateTimeOfVisitLocationPoint FROM `animal_locations` WHERE `id` = '$visitedLocationPointId'"))["dateTimeOfVisitLocationPoint"],
         "locationPointId" => $locationPointId
     ]);
+
+}
+
+
+//DELETE API 6.4: Удаление точки локации, посещенной животным
+function deleteVisitedLocation($connect, $animalId, $visitedPointId){
+
+    //animalId = null, animalId <= 0
+    // visitedPointId = null, visitedPointId <= 0 - 400
+    if (validDidgitData($animalId, $visitedPointId)){
+        giveError(400, "Invalid data");
+        return;
+    }
+
+    //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
+    if(validAuthorize($connect, true)){
+        giveError(401, "Authorization error");
+        return;
+    }
+
+    //Животное с animalId не найдено
+    // Объект с информацией о посещенной точке локации с visitedPointId не найден.
+    // У животного нет объекта с информацией о посещенной точке локации с visitedPointId - 404
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = '$animalId'")) !== 1
+    || mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animal_locations` WHERE `id` = '$visitedPointId' AND `id_animal` = '$animalId'")) === 0){
+        giveError(404, "Ainmal or Location not found. Or this animal wasnt in this location");
+        return;
+    }
+
+    //удаление посещенной точки локации
+    mysqli_query($connect, "DELETE FROM `animal_locations` WHERE `id` = '$visitedPointId'");
+
+    //получение информации о первой посещенной точке
+    $firstVisitedLocation = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `id`, `id_location` FROM `animal_locations` WHERE `id_animal` = '$animalId'"));
+    $firstVisitedLocationId = $firstVisitedLocation["id_location"];
+    $chipperedLocationId = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `chippingLocationId` FROM `animals` WHERE `id` = '$animalId"))["chippingLocationId"];
+
+    //если id первой посещенной точки = id чипирования, то ее тоже удаляем
+    if ($firstVisitedLocationId === $chipperedLocationId){
+        $firstLocationId = $firstVisitedLocation["id"];
+        mysqli_query($connect, "DELETE FROM `animal_locations` WHERE `id` ='$firstLocationId'");
+    }
 
 }

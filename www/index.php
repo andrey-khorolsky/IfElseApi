@@ -34,6 +34,8 @@ if ($page[0] === "accounts"){
             addVisitedLocationToAnimal($connect, $page[1], $page[3]);
         elseif ($method === "PUT")
             changeAnimalVisitedLocation($connect, $page[1]);
+        elseif ($method === "DELETE")
+            deleteVisitedLocation($connect, $page[1], $page[3]);
     }
     elseif (isset($page[1]) && $page[1] === "types"){
         if ($method === "GET")
