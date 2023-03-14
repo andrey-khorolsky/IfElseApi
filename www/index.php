@@ -32,6 +32,8 @@ if ($page[0] === "accounts"){
             getVisitedLocations($connect, $page[1]);
         elseif ($method === "POST")
             addVisitedLocationToAnimal($connect, $page[1], $page[3]);
+        elseif ($method === "PUT")
+            changeAnimalVisitedLocation($connect, $page[1]);
     }
     elseif (isset($page[1]) && $page[1] === "types"){
         if ($method === "GET")

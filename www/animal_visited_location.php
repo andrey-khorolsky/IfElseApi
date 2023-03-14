@@ -102,3 +102,52 @@ function addVisitedLocationToAnimal($connect, $animalId, $locationId){
         "locationPointId" => $locationId
     ]);
 }
+
+
+//PUT API 6.3: Изменение точки локации, посещенной животным
+function changeAnimalVisitedLocation($connect, $animalId){
+    $locations = file_get_contents("php://input");
+    $locations = json_decode($locations, true);
+
+    $visitedLocationPointId = $locations["visitedLocationPointId"];
+    $locationPointId = $locations["locationPointId"];
+
+    //animalId = null,
+    // animalId <= 0,
+    // visitedLocationPointId = null,
+    // visitedLocationPointId <= 0,
+    // locationPointId = null,
+    // locationPointId <= 0
+    // Обновление первой посещенной точки на точку чипирования
+    // Обновление точки на такую же точку
+    // Обновление точки локации на точку, совпадающую со следующей и/или с предыдущей точками - 400
+    if (validDidgitData($animalId, $visitedLocationPointId, $locationPointId)){
+        giveError(400, "Invalid data");
+        return;
+    }
+
+    //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
+    if (validAuthorize($connect, true)){
+        giveError(401, "Authorization error");
+        return;
+    }
+
+    // Животное с animalId не найдено
+    // Объект с информацией о посещенной точке локации с visitedLocationPointId не найден.
+    // У животного нет объекта с информацией о посещенной точке локации с visitedLocationPointId.
+    // Точка локации с locationPointId не найденa - 404
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = '$animalId'")) !== 1
+    || mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animal_locations` WHERE `id` = '$visitedLocationPointId' AND `id_animal` = '$animalId'")) !== 1
+    || mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `locations` WHERE `id` = '$locationPointId'")) !== 1){
+        giveError(404, "Ainmal or Location not found. Or this animal wasnt in this location");
+        return;
+    }
+
+    mysqli_query($connect, "UPDATE `animal_location` SET `id_location` = '$locationPointId'");
+    echo json_encode([
+        "id" => $visitedLocationPointId,
+        "dateTimeOfVisitLocationPoint" => mysqli_fetch_assoc(mysqli_query($connect, "SELECT `dateTimeOfVisitLocationPoint` FROM `animal_location` WHERE `id` = '$visitedLocationPointId'"))["visitedLocationPointId"],
+        "locationPointId" => $locationPointId
+    ]);
+
+}
