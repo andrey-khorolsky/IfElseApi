@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 15 2023 г., 15:07
+-- Время создания: Мар 15 2023 г., 18:33
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -55,9 +55,9 @@ INSERT INTO `accounts` (`id`, `firstName`, `lastName`, `email`, `password`) VALU
 
 CREATE TABLE `animals` (
   `id` bigint NOT NULL,
-  `weight` float NOT NULL,
-  `length` float NOT NULL,
-  `height` float NOT NULL,
+  `weight` decimal(65,30) NOT NULL,
+  `length` decimal(65,30) NOT NULL,
+  `height` decimal(65,30) NOT NULL,
   `gender` varchar(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'OTHER',
   `lifeStatus` varchar(5) NOT NULL DEFAULT 'ALIVE',
   `chippingDateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -71,10 +71,10 @@ CREATE TABLE `animals` (
 --
 
 INSERT INTO `animals` (`id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, `chippingDateTime`, `chipperId`, `chippingLocationId`, `deathDateTime`) VALUES
-(1, 30, 0.7, 0.6, 'MALE', 'ALIVE', '2023-03-08 06:51:51', 1, 1, NULL),
-(2, 40, 0.87, 0.9, 'FEMALE', 'ALIVE', '2023-02-26 19:36:38', 2, 2, NULL),
-(3, 120, 3.45, 0.14, 'MALE', 'ALIVE', '2023-02-26 19:38:27', 3, 3, NULL),
-(4, 20, 50, 54, 'MALE', 'ALIVE', '2023-03-13 06:54:41', 1, 2, NULL);
+(1, '30.000000000000000000000000000000', '0.699999988079071000000000000000', '0.600000023841857900000000000000', 'MALE', 'ALIVE', '2023-03-08 06:51:51', 1, 1, NULL),
+(2, '40.000000000000000000000000000000', '0.870000004768371600000000000000', '0.899999976158142100000000000000', 'FEMALE', 'ALIVE', '2023-02-26 19:36:38', 2, 2, NULL),
+(3, '120.000000000000000000000000000000', '3.450000047683716000000000000000', '0.140000000596046450000000000000', 'MALE', 'ALIVE', '2023-02-26 19:38:27', 3, 3, NULL),
+(4, '20.000000000000000000000000000000', '50.000000000000000000000000000000', '54.000000000000000000000000000000', 'MALE', 'ALIVE', '2023-03-13 06:54:41', 1, 2, NULL);
 
 -- --------------------------------------------------------
 
