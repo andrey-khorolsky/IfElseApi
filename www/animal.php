@@ -9,6 +9,8 @@ require("common_function.php");
 
 if (isset($page[1]) && $page[1] === "search")
     getSearchAnimals($connect);
+elseif(isset($page[2]) && $page[2] === "types")
+    updateTypeOfAnimal($connect, $page[1]);
 elseif ($method === "GET")
     getAnimalById($connect, $page[1]);
 elseif ($method === "POST")
@@ -304,6 +306,59 @@ function deleteAnimal($connect, $id){
     mysqli_query($connect, "DELETE FROM `animals` WHERE `id` = '$id'");
 
 }
+
+
+//PUT API 5.7: Изменение типа животного у животного
+function updateTypeOfAnimal($connect, $animalId){
+
+    $newType = file_get_contents("php://input");
+    $newType = json_decode($newType, true);
+
+    $oldTypeId = $_POST["oldTypeId"] ?? ($newType["oldTypeId"] ?? null);
+    $newTypeId = $_POST["newTypeId"] ?? ($newType["newTypeId"] ?? null);
+
+    //animalId = null,
+    // animalId <= 0,
+    // oldTypeId = null,
+    // oldTypeId <= 0,
+    // newTypeId = null,
+    // newTypeId <= 0
+    if (validDidgitData($animalId, $oldTypeId, $newTypeId)){
+        giveError(400, "Invalid data");
+        return;
+    }
+
+    //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
+    if (validAuthorize($connect, true)){
+        giveError(401, "Authorization error");
+        return;
+    }
+
+    //  Животное с animalId не найдено
+    // Тип животного с oldTypeId не найден
+    // Тип животного с newTypeId не найден
+    // Типа животного с oldTypeId нет у животного с animalId - 404
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = '$animalId'")) !== 1
+    || mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `types` WHERE `id` = '$oldTypeId'")) !== 1
+    || mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `types` WHERE `id` = '$newTypeId'")) !== 1
+    || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animal_types` WHERE `id_animal` = '$animalId' AND `id_type` = '$oldTypeId'")) === 0){
+        giveError(404, "Type not found or this animal hasnt this type");
+        return;
+    }
+
+    //Тип животного с newTypeId уже есть у животного с animalId. Животное с animalId уже имеет типы с oldTypeId и newTypeId - 409
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animal_types` WHERE `id_animal` = '$animalId' AND `id_type` = '$oldTypeId'")) !== 0
+    || mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animal_types` WHERE `id_animal` = '$animalId' AND `id_type` = '$newTypeId'")) !== 0){
+        giveError(409, "Animal is has this type");
+        return;
+    }
+
+    mysqli_query($connect, "UPDATE `animal_tyeps` SET `id_type` = '$newTypeId' WHERE `id_animal` = '$animalId'");
+    $animal = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, DATE_FORMAT(`chippingDateTime`, '%Y-%m-%dT%T+03:00') as chippingDateTime, `chipperId`, `chippingLocationId`, DATE_FORMAT(`deathDateTime`, '%Y-%m-%dT%T+03:00') as deathDateTime FROM `animals` WHERE `id` = '$animalId'"));
+    echo json_encode(getAnimalsType($connect, $animal));
+
+}
+
 
 //поиск типов и посещенных локаций животного и добавление информации в результат
 function getAnimalsType($connect, $animal){
