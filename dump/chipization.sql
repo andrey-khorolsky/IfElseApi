@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 15 2023 г., 12:28
+-- Время создания: Мар 15 2023 г., 15:07
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -58,7 +58,7 @@ CREATE TABLE `animals` (
   `weight` float NOT NULL,
   `length` float NOT NULL,
   `height` float NOT NULL,
-  `gender` varchar(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `gender` varchar(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'OTHER',
   `lifeStatus` varchar(5) NOT NULL DEFAULT 'ALIVE',
   `chippingDateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `chipperId` int NOT NULL,
@@ -135,8 +135,8 @@ INSERT INTO `animal_types` (`id_animal`, `id_type`) VALUES
 
 CREATE TABLE `locations` (
   `id` bigint NOT NULL,
-  `latitude` decimal(65,30) NOT NULL,
-  `longitude` decimal(65,30) NOT NULL
+  `latitude` double NOT NULL,
+  `longitude` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -144,12 +144,12 @@ CREATE TABLE `locations` (
 --
 
 INSERT INTO `locations` (`id`, `latitude`, `longitude`) VALUES
-(1, '89.000000000000000000000000000000', '12.000000000000000000000000000000'),
-(2, '67.000000000000000000000000000000', '67.000000000000000000000000000000'),
-(3, '89.000000000000000000000000000000', '68.000000000000000000000000000000'),
-(4, '56.000000000000000000000000000000', '28.000000000000000000000000000000'),
-(7, '71.233456400000000000000000000000', '23.453645300000000000000000000000'),
-(8, '-17.456356400000000000000000000000', '22.946556977199390000000000000000');
+(1, 89, 12),
+(2, 67, 67),
+(3, 89, 68),
+(4, 56, 28),
+(7, 71.2334564, 23.4536453),
+(8, -17.4563564, 22.94655697719939);
 
 -- --------------------------------------------------------
 
