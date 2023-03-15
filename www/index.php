@@ -19,4 +19,3 @@ if ($page[0] === "accounts" || $page[0] === "registration"){
 } elseif ($page[0] === "locations"){
     require("location.php");
 }
-
