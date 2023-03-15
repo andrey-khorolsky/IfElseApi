@@ -28,7 +28,7 @@ function getAnimalTypeById($connect, $id){
     }
 
     //Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (notValidAuthorize($connect)){
         giveError(401, "Authorization error");
         return;
     }
@@ -52,13 +52,13 @@ function addAnimalType($connect){
     $type = $_POST["type"] ?? ($data["type"] ?? null);
 
     //type = null, type = "" или состоит из пробелов - 400
-    if (validData($type)){
+    if (notValidData($type)){
         giveError(400, "Invalid data");
         return;
     }
     
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -96,7 +96,7 @@ function updateAnimalType($connect, $id){
     }
 
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -131,7 +131,7 @@ function deleteAnimalType($connect, $id){
     }
 
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }

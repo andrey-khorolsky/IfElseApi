@@ -33,7 +33,7 @@ function registrationAccount($connect){
     $password = $_POST["password"] ?? ($data["password"] ?? null);
 
     //валидация данных - 400
-    if (validData($firstName, $lastName, $password) || validEmail($email)){
+    if (notValidData($firstName, $lastName, $password) || notValidEmail($email)){
         giveError(400, "Invalid data");
         return;
     }
@@ -50,12 +50,10 @@ function registrationAccount($connect){
         return;
     }
 
-    $firstName = mysqli_real_escape_string($connect, $firstName);
-    $lastName = mysqli_real_escape_string($connect, $lastName);
-    $email = mysqli_real_escape_string($connect, $email);
-    $password = mysqli_real_escape_string($connect, $password);
+    $firstNameEsc = mysqli_real_escape_string($connect, $firstName);
+    $lastNameEsc = mysqli_real_escape_string($connect, $lastName);
 
-    mysqli_query($connect, "INSERT INTO `accounts` (`id`, `firstName`, `lastName`, `email`, `password`) VALUES (null, '$firstName', '$lastName', '$email', '$password')");
+    mysqli_query($connect, "INSERT INTO `accounts` (`id`, `firstName`, `lastName`, `email`, `password`) VALUES (null, '$firstNameEsc', '$lastNameEsc', '$email', '$password')");
 
     http_response_code(201);
     echo json_encode([
@@ -79,7 +77,7 @@ function getAccountById($connect, $id){
     }
 
     //Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (notValidAuthorize($connect)){
         giveError(401, "Authorization error");
         return;
     }
@@ -119,7 +117,7 @@ function getSearchAccount($connect){
     }
 
     //Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (notValidAuthorize($connect)){
         giveError(401, "Authorization error");
         return;
     }
@@ -181,14 +179,14 @@ function updateAccount($connect, $id){
 
     //accountId = null,
     // accountId <= 0 - 400
-    if (is_null($id) || $id <=0 || validData($firstName, $lastName, $password) || validEmail($email)){
+    if (is_null($id) || $id <=0 || notValidData($firstName, $lastName, $password) || notValidEmail($email)){
         giveError(400, "Invalid data");
         return;
     }
 
 
     //Запрос от неавторизованного аккаунта, Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -205,10 +203,10 @@ function updateAccount($connect, $id){
         return;
     }
 
-    $firstName = mysqli_real_escape_string($connect, $firstName);
-    $lastName = mysqli_real_escape_string($connect, $lastName);
-    $email = mysqli_real_escape_string($connect, $email);
-    $password = mysqli_real_escape_string($connect, $password);
+    // $firstName = mysqli_real_escape_string($connect, $firstName);
+    // $lastName = mysqli_real_escape_string($connect, $lastName);
+    // $email = mysqli_real_escape_string($connect, $email);
+    // $password = mysqli_real_escape_string($connect, $password);
 
     mysqli_query($connect, "UPDATE `accounts` SET `firstName` = '$firstName', `lastName` = '$lastName', `email` = '$email', `password` = '$password' WHERE `id` = '$id'");
 
@@ -231,7 +229,7 @@ function deleteAccountById($connect, $id){
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }

@@ -13,20 +13,20 @@ function giveError($err, $msg){
 
 //проверка формата даты. all right -> false
 function dateTimeIso($datetime){
-    if ($datetime == null) return false;
+    if ($datetime == null) return true;
     try{
         $date = date_create($datetime);
         // date_format($date, 'Y-m-d H:i:s');
         date(DATE_ISO8601, strtotime($date));
     } catch(Throwable){
-        return true;
+        return false;
     }
-    return  false;
+    return  true;
 }
 
 
 //валидация численных значений. all right -> flase
-function validDidgitData(...$data){
+function notValidDidgitData(...$data){
     foreach ($data as $d){
         if (is_null($d) || $d <= 0) return true;
     }
@@ -35,7 +35,7 @@ function validDidgitData(...$data){
 
 
 //валидация данных. all right -> false
-function validData(...$data){
+function notValidData(...$data){
     foreach ($data as $d){
         if (is_null($d) || trim($d) === "") return true;
     }
@@ -44,7 +44,7 @@ function validData(...$data){
 
 
 //валидация почты. all right -> false
-function validEmail($email){
+function notValidEmail($email){
     if (is_null($email)) return true;
     $reg = "/^([a-zA-Z0-9]+[a-zA-Z0-9._-]+[a-zA-Z0-9]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,})$/";
         if (preg_match($reg, $email) === 1) return false;
@@ -52,19 +52,8 @@ function validEmail($email){
 }
 
 
-//валидация координат. all right -> false
-function validCoordinates($latitude, $longitude){
-    //latitude = null, latitude < -90, latitude > 90,
-    // longitude = null, longitude < -180, longitude > 180
-
-    if (is_null($latitude) || ($latitude < (-90)) || ($latitude > 90) || is_null($longitude) || ($longitude < (-180)) || ($longitude > 180))
-        return true;
-    return false;
-}
-
-
-//проверка авторизационных данных. all right -> false
-function validAuthorize($connect, bool $necessity = false){
+//проверка авторизационных данных.
+function notValidAuthorize($connect, bool $necessity = false){
     
     $authorization = getallheaders()["Authorization"] ?? null;
     //проверка на необходимость авторизации при отсутствии хедера

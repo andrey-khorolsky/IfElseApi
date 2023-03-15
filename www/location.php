@@ -29,7 +29,7 @@ function getLocationById($connect, $id){
     }
 
     //Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (notValidAuthorize($connect)){
         giveError(401, "Authorization error");
         return;
     }
@@ -55,18 +55,19 @@ function addLocation($connect){
     $longitude = $_POST["longitude"] ?? ($data["longitude"] ?? null);
 
     //невалидные координаты 
-    if (validCoordinates($latitude, $longitude)){
+    if (!validCoordinates($latitude, $longitude)){
         giveError(400, "Invalid coord");
         return;
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
+
     //Точка локации с такими latitude и longitude уже существует - 409
-    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `locations` WHERE `latitude` = $latitude AND `longitude` = $longitude")) !== 0){
+    if (mysqli_num_rows(mysqli_execute_query($connect, "SELECT * FROM `locations` WHERE `latitude` = ? AND `longitude` = ?", [$latitude, $longitude])) !== 0){
         giveError(409, "Location is existed");
         return;
     }
@@ -97,13 +98,13 @@ function changeLocation($connect, $id){
     $longitude = $newData["longitude"];
 
     //невалидный id или координаты 
-    if (is_null($id) || $id <= 0 || validCoordinates($latitude, $longitude)){
+    if (is_null($id) || $id <= 0 || !validCoordinates($latitude, $longitude)){
         giveError(400, "Invalid data");
         return;
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -141,7 +142,7 @@ function deleteLocationById($connect, $id){
     }
 
     // Запрос от неавторизованного акк, Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -154,4 +155,15 @@ function deleteLocationById($connect, $id){
 
     mysqli_query($connect, "DELETE FROM `locations` WHERE `id` = '$id'");
 
+}
+
+
+//валидация координат
+function validCoordinates($latitude, $longitude){
+    //latitude = null, latitude < -90, latitude > 90,
+    // longitude = null, longitude < -180, longitude > 180
+
+    if (is_null($latitude) || ($latitude < (-90)) || ($latitude > 90) || is_null($longitude) || ($longitude < (-180)) || ($longitude > 180))
+        return false;
+    return true;
 }

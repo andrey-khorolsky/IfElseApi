@@ -9,6 +9,12 @@ require("common_function.php");
 
 if (isset($page[1]) && $page[1] === "search")
     getSearchAnimals($connect);
+elseif (isset($page[3])){
+    if ($method === "POST")
+        addTypeToAnimal($connect, $page[1], $page[3]);
+    if ($method === "DELETE")
+        deleteTypeFromAnimal($connect, $page[1], $page[3]);
+}
 elseif(isset($page[2]) && $page[2] === "types")
     updateTypeOfAnimal($connect, $page[1]);
 elseif ($method === "GET")
@@ -19,6 +25,8 @@ elseif ($method === "PUT")
     updateAnimal($connect, $page[1]);
 elseif ($method === "DELETE")
     deleteAnimal($connect, $page[1]);
+
+return;
 
 //GET API 5.1: Получение информации о животном
 function getAnimalById($connect, $id){
@@ -32,7 +40,7 @@ function getAnimalById($connect, $id){
     }
 
     //Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (notValidAuthorize($connect)){
         giveError(401, "Authorization error");
         return;
     }
@@ -76,13 +84,13 @@ function getSearchAnimals($connect){
     // gender != “MALE”, “FEMALE”, “OTHER”
     // 400
     if ($from < 0 || $size <= 0 || (isset($chipperId) && $chipperId <= 0) || (isset($chippingLocationId) && $chippingLocationId <= 0) || !validLifestatus($lifeStatus)
-        || !validGender($gender) || dateTimeIso($startDateTime) || dateTimeIso($endDateTime)){
+        || (isset($gender) && !validGender($gender)) || !dateTimeIso($startDateTime) || !dateTimeIso($endDateTime)){
         giveError(400, "Bad request");
         return;
     }
 
     //Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (notValidAuthorize($connect)){
         giveError(401, "Authorization error");
         return;
     }
@@ -172,13 +180,14 @@ function addAnimal($connect){
     $chipperId = $_POST["chipperId"] ?? ($animalData["chipperId"] ?? null);
     $chippingLocationId = $_POST["chippingLocationId"] ?? ($animalData["chippingLocationId"] ?? null);
 
-    if (is_null($animalTypes) || count($animalTypes) <= 0 || validDidgitData($weight, $length, $height, $chipperId, $chippingLocationId) || !validGender($gender)){
+    if (is_null($animalTypes) || count($animalTypes) <= 0 || notValidDidgitData($weight, $length, $height, $chipperId, $chippingLocationId)
+    || !validGender($gender) || !validArr($animalTypes)){
         giveError(400, "Invalid data");
         return;
     }
 
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -245,7 +254,7 @@ function updateAnimal($connect, $id){
     // gender != “MALE”, “FEMALE”, “OTHER”,
     // lifeStatus != “ALIVE”, “DEAD”,
     // - 400
-    if (validDidgitData($id, $weight, $length, $height, $chipperId, $chippingLocationId) || !validGender($gender) || !validLifestatus($lifeStatus)){
+    if (notValidDidgitData($id, $weight, $length, $height, $chipperId, $chippingLocationId) || !validGender($gender) || !validLifestatus($lifeStatus)){
         giveError(400, "Invalid data");
         return;
     }
@@ -260,8 +269,7 @@ function updateAnimal($connect, $id){
 
     
     // Установка lifeStatus = “ALIVE”, если у животного lifeStatus = “DEAD”
-    // Новая точка чипирования совпадает с первой посещенной точкой локации
-    // - 400
+    // Новая точка чипирования совпадает с первой посещенной точкой локации - 400
     $currentLifeStatus = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `lifeStatus` FROM `animals` WHERE `id` = '$id'"))["lifeStatus"];
     $firstLocation = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `id_location` FROM `animal_locations` WHERE `id` = '$id'")) ?? -1;
     
@@ -271,15 +279,21 @@ function updateAnimal($connect, $id){
     }
 
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
 
     // подготовка запроса
     $stmt = mysqli_stmt_init($connect);
-    mysqli_stmt_prepare($stmt, "UPDATE `animals` SET `weight` = ?, `length` = ?, `height` = ?, `gender` = '$gender', `lifeStatus` = '$lifeStatus', `chipperId` = '$chipperId', `chippingLocationId` = '$chippingLocationId' WHERE `id` = '$id'");
-    mysqli_stmt_bind_param($stmt, "ddd", $weight, $length, $height);
+
+    if (mysqli_fetch_assoc(mysqli_query($connect, "SELECT `lifeStatus` FROM `animals` WHERE `id` = $id"))["lifeStatus"] === "ALIVE" && $lifeStatus === "DEAD"){
+        mysqli_stmt_prepare($stmt, "UPDATE `animals` SET `weight` = ?, `length` = ?, `height` = ?, `gender` = ?, `lifeStatus` = ?, `chipperId` = ?, `chippingLocationId` = ?,  `deathDateTime` = DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%dT%T+03:00') WHERE `id` = '$id'");
+        mysqli_stmt_bind_param($stmt, "dddssid", $weight, $length, $height, $gender, $lifeStatus, $chipperId, $chippingLocationId);
+    } else{
+        mysqli_stmt_prepare($stmt, "UPDATE `animals` SET `weight` = ?, `length` = ?, `height` = ?, `gender` = ?, `lifeStatus` = ?, `chipperId` = ?, `chippingLocationId` = ? WHERE `id` = '$id'");
+        mysqli_stmt_bind_param($stmt, "dddssid", $weight, $length, $height, $gender, $lifeStatus, $chipperId, $chippingLocationId);
+    }
 
     // вставка
     mysqli_stmt_execute($stmt);
@@ -300,7 +314,7 @@ function deleteAnimal($connect, $id){
     }
 
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorziation error");
         return;
     }
@@ -313,6 +327,43 @@ function deleteAnimal($connect, $id){
 
     mysqli_query($connect, "DELETE FROM `animals` WHERE `id` = '$id'");
 
+}
+
+
+//POST API 5.6: Добавление типа животного к животному
+function addTypeToAnimal($connect, $animalId, $typeId){
+
+    //animalId = null, animalId <= 0,
+    // typeId = null, typeId < = 0 - 400
+    if (notValidDidgitData($animalId, $typeId)){
+        giveError(400 ,"Invalid data");
+        return;
+    }
+
+    //Запрос от неавторизованного аккаунта. Неверные авторизационные данные - 401
+    if (notValidAuthorize($connect, true)){
+        giveError(401, "Authorization error");
+        return;
+    }
+
+    // Животное с animalId не найдено
+    // Тип животного с typeId не найден - 404
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = $animalId")) !== 1
+    || mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `types` WHERE `id` = $typeId")) !== 1){
+        giveError(404, "Account or type not found");
+        return;
+    }
+
+    //Тип животного с typeId уже есть у животного с animalId - 409
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animal_types` WHERE `id_animal` = $animalId AND `id_type` = $typeId")) !== 0){
+        giveError(409, "Animal is has this type");
+        return;
+    }
+
+    mysqli_query($connect, "INSERT INTO `animal_types` (`id_animal`, `id_type`) VALUES ($animalId, $typeId)");
+    $animal = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, DATE_FORMAT(`chippingDateTime`, '%Y-%m-%dT%T+03:00') as chippingDateTime, `chipperId`, `chippingLocationId`, DATE_FORMAT(`deathDateTime`, '%Y-%m-%dT%T+03:00') as deathDateTime FROM `animals` WHERE `id` = '$animalId'"));
+    http_response_code(201);
+    echo json_encode(getAnimalsType($connect, $animal));
 }
 
 
@@ -331,13 +382,13 @@ function updateTypeOfAnimal($connect, $animalId){
     // oldTypeId <= 0,
     // newTypeId = null,
     // newTypeId <= 0
-    if (validDidgitData($animalId, $oldTypeId, $newTypeId)){
+    if (notValidDidgitData($animalId, $oldTypeId, $newTypeId)){
         giveError(400, "Invalid data");
         return;
     }
 
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -355,16 +406,48 @@ function updateTypeOfAnimal($connect, $animalId){
     }
 
     //Тип животного с newTypeId уже есть у животного с animalId. Животное с animalId уже имеет типы с oldTypeId и newTypeId - 409
-    if (mysqli_num_rows(mysqli_query($connect, "SELECT `id_animal` FROM `animal_types` WHERE `id_animal` = '$animalId' AND `id_type` = '$oldTypeId'")) !== 0
-    || mysqli_num_rows(mysqli_query($connect, "SELECT `id_animal` FROM `animal_types` WHERE `id_animal` = '$animalId' AND `id_type` = '$newTypeId'")) !== 0){
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT `id_animal` FROM `animal_types` WHERE `id_animal` = '$animalId' AND `id_type` = '$newTypeId'")) !== 0
+    || (mysqli_num_rows(mysqli_query($connect, "SELECT `id_animal` FROM `animal_types` WHERE `id_animal` = '$animalId' AND `id_type` = '$newTypeId'")) !== 0
+    && mysqli_num_rows(mysqli_query($connect, "SELECT `id_animal` FROM `animal_types` WHERE `id_animal` = '$animalId' AND `id_type` = '$oldTypeId'")) !== 0)){
         giveError(409, "Animal is has this type");
         return;
     }
 
-    mysqli_query($connect, "UPDATE `animal_tyeps` SET `id_type` = '$newTypeId' WHERE `id_animal` = '$animalId'");
+    mysqli_query($connect, "UPDATE `animal_types` SET `id_type` = '$newTypeId' WHERE `id_animal` = '$animalId'");
     $animal = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, DATE_FORMAT(`chippingDateTime`, '%Y-%m-%dT%T+03:00') as chippingDateTime, `chipperId`, `chippingLocationId`, DATE_FORMAT(`deathDateTime`, '%Y-%m-%dT%T+03:00') as deathDateTime FROM `animals` WHERE `id` = '$animalId'"));
     echo json_encode(getAnimalsType($connect, $animal));
 
+}
+
+
+//DELETE API 5.8: Удаление типа животного у животного
+function deleteTypeFromAnimal($connect, $animalId, $typeId){
+    
+    //animalId = null, animalId <= 0,
+    // typeId = null, typeId <= 0
+    // У животного только один тип и это тип с typeId - 400
+    if (notValidDidgitData($animalId, $typeId) || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animal_types` WHERE `id` = $animalId")) === 1){
+        giveError(400, "Invalid data");
+        return;
+    }
+
+    //Запрос от неавторизованного аккаунта. Неверные авторизационные данные - 401
+    if (notValidAuthorize($connect, true)){
+        giveError(401, "Authorization error");
+        return;
+    }
+
+    //Животное с animalId не найдено
+    // Тип животного с typeId не найден
+    // У животного с animalId нет типа с typeId - 404
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animals` WHERE `id` = $animalId")) !== 1
+    || mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `animal_types` WHERE `id_animal` = $animalId AND `id_type` = $typeId")) === 0){
+        giveError(404, "Animal or type not found");
+        return;
+    }
+
+    $animal = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, DATE_FORMAT(`chippingDateTime`, '%Y-%m-%dT%T+03:00') as chippingDateTime, `chipperId`, `chippingLocationId`, DATE_FORMAT(`deathDateTime`, '%Y-%m-%dT%T+03:00') as deathDateTime FROM `animals` WHERE `id` = '$animalId'"));
+    echo json_encode(getAnimalsType($connect, $animal));
 }
 
 
@@ -392,10 +475,17 @@ function getAnimalsType($connect, $animal){
     return array_merge(array_slice($animal, 0, 1), ["animalTypes" => array_values($typesList)], array_slice($animal, 1, 8), ["visitedLocations" => ($locationsList)], array_slice($animal, 8));
 }
 
+//проверка массива
+function validArr($arr){
+    foreach($arr as $a)
+        if ($a <= 0 || is_null($a)) return false;
+    return true;
+}
+
 
 //проверка поля gender
 function validGender($gender){
-    if (is_null($gender)) return true;
+    if (is_null($gender)) return false;
     if (strcmp($gender, "MALE") == 0 || strcmp($gender, "FEMALE") == 0 || strcmp($gender, "OTHER") == 0) return true;
     return false;
 }

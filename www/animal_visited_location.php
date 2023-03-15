@@ -35,13 +35,13 @@ function getVisitedLocations($connect, $id){
     // startDateTime - не в формате ISO-8601,
     // endDateTime - не в формате ISO-8601
     // 400
-    if ($id == null || $id <= 0 || $from < 0 || $size <= 0 || dateTimeIso($startDateTime) || dateTimeIso($endDateTime)){
+    if ($id == null || $id <= 0 || $from < 0 || $size <= 0 || !dateTimeIso($startDateTime) || !dateTimeIso($endDateTime)){
         giveError(400, "Bad request");
         return;
     }
 
     //Неверные авторизационные данные - 401
-    if (validAuthorize($connect)){
+    if (notValidAuthorize($connect)){
         giveError(401, "Authorization error");
         return;
     }
@@ -81,7 +81,7 @@ function addVisitedLocationToAnimal($connect, $animalId, $locationId){
     // У животного lifeStatus = "DEAD"
     // Животное находится в точке чипирования и никуда не перемещалось, попытка добавить точку локации, равную точке чипирования.
     // Попытка добавить точку локации, в которой уже находится животное
-    if (validDidgitData($animalId, $locationId)){
+    if (notValidDidgitData($animalId, $locationId)){
         giveError(400, "Invalid id");
         return;
     }
@@ -104,7 +104,7 @@ function addVisitedLocationToAnimal($connect, $animalId, $locationId){
     }
 
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -138,13 +138,15 @@ function changeAnimalVisitedLocation($connect, $animalId){
     // Обновление первой посещенной точки на точку чипирования
     // Обновление точки на такую же точку
     // Обновление точки локации на точку, совпадающую со следующей и/или с предыдущей точками - 400
-    if (validDidgitData($animalId, $visitedLocationPointId, $locationPointId)){
+    if (notValidDidgitData($animalId, $visitedLocationPointId, $locationPointId) || $visitedLocationPointId === $locationPointId
+    || mysqli_fetch_assoc(mysqli_query($connect, "SELECT `id_location` FROM `animal_locations` WHERE `id_animal` = $animalId"))["id_location"]
+    === mysqli_fetch_assoc(mysqli_query($connect, "SELECT `chippingLocationId` FROM `animals` WHERE `id` = $animalId"))["chippingLocationId"]){
         giveError(400, "Invalid data");
         return;
     }
 
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
-    if (validAuthorize($connect, true)){
+    if (notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
@@ -175,13 +177,13 @@ function deleteVisitedLocation($connect, $animalId, $visitedPointId){
 
     //animalId = null, animalId <= 0
     // visitedPointId = null, visitedPointId <= 0 - 400
-    if (validDidgitData($animalId, $visitedPointId)){
+    if (notValidDidgitData($animalId, $visitedPointId)){
         giveError(400, "Invalid data");
         return;
     }
 
     //Запрос от неавторизованного аккаунта Неверные авторизационные данные - 401
-    if(validAuthorize($connect, true)){
+    if(notValidAuthorize($connect, true)){
         giveError(401, "Authorization error");
         return;
     }
