@@ -75,8 +75,8 @@ function getSearchAnimals($connect){
     // lifeStatus != “ALIVE”, “DEAD”,
     // gender != “MALE”, “FEMALE”, “OTHER”
     // 400
-    if ($from < 0 || $size <= 0 || (isset($chipperId) && $chipperId <= 0) || (isset($chippingLocationId) && $chippingLocationId <= 0) || validLifestatus($lifeStatus)
-        || validGender($gender) || dateTimeIso($startDateTime) || dateTimeIso($endDateTime)){
+    if ($from < 0 || $size <= 0 || (isset($chipperId) && $chipperId <= 0) || (isset($chippingLocationId) && $chippingLocationId <= 0) || !validLifestatus($lifeStatus)
+        || !validGender($gender) || dateTimeIso($startDateTime) || dateTimeIso($endDateTime)){
         giveError(400, "Bad request");
         return;
     }
@@ -172,7 +172,7 @@ function addAnimal($connect){
     $chipperId = $_POST["chipperId"] ?? ($animalData["chipperId"] ?? null);
     $chippingLocationId = $_POST["chippingLocationId"] ?? ($animalData["chippingLocationId"] ?? null);
 
-    if (is_null($animalTypes) || count($animalTypes) <= 0 || validDidgitData($weight, $length, $height, $chipperId, $chippingLocationId) || validGender($gender)){
+    if (is_null($animalTypes) || count($animalTypes) <= 0 || validDidgitData($weight, $length, $height, $chipperId, $chippingLocationId) || !validGender($gender)){
         giveError(400, "Invalid data");
         return;
     }
@@ -245,7 +245,7 @@ function updateAnimal($connect, $id){
     // gender != “MALE”, “FEMALE”, “OTHER”,
     // lifeStatus != “ALIVE”, “DEAD”,
     // - 400
-    if (validDidgitData($id, $weight, $length, $height, $chipperId, $chippingLocationId) || validGender($gender) || validLifestatus($lifeStatus)){
+    if (validDidgitData($id, $weight, $length, $height, $chipperId, $chippingLocationId) || !validGender($gender) || !validLifestatus($lifeStatus)){
         giveError(400, "Invalid data");
         return;
     }
@@ -276,7 +276,15 @@ function updateAnimal($connect, $id){
         return;
     }
 
-    mysqli_query($connect, "UPDATE `animals` SET `weight` = '$weight', `length` = '$length', `height` = '$height', `gender` = '$gender', `lifeStatus` = '$lifeStatus', `chipperId` = '$chipperId', `chippingLocationId` = '$chippingLocationId' WHERE `id` = '$id'");
+    // подготовка запроса
+    $stmt = mysqli_stmt_init($connect);
+    mysqli_stmt_prepare($stmt, "UPDATE `animals` SET `weight` = ?, `length` = ?, `height` = ?, `gender` = '$gender', `lifeStatus` = '$lifeStatus', `chipperId` = '$chipperId', `chippingLocationId` = '$chippingLocationId' WHERE `id` = '$id'");
+    mysqli_stmt_bind_param($stmt, "ddd", $weight, $length, $height);
+
+    // вставка
+    mysqli_stmt_execute($stmt);
+
+    // mysqli_query($connect, "UPDATE `animals` SET `weight` = '$weight', `length` = '$length', `height` = '$height', `gender` = '$gender', `lifeStatus` = '$lifeStatus', `chipperId` = '$chipperId', `chippingLocationId` = '$chippingLocationId' WHERE `id` = '$id'");
     $animal = mysqli_fetch_assoc(mysqli_query($connect, "SELECT `id`, `weight`, `length`, `height`, `gender`, `lifeStatus`, DATE_FORMAT(`chippingDateTime`, '%Y-%m-%dT%T+03:00') as chippingDateTime, `chipperId`, `chippingLocationId`, DATE_FORMAT(`deathDateTime`, '%Y-%m-%dT%T+03:00') as deathDateTime FROM `animals` WHERE `id` = '$id'"));
     echo json_encode(getAnimalsType($connect, $animal));
 }
@@ -347,8 +355,8 @@ function updateTypeOfAnimal($connect, $animalId){
     }
 
     //Тип животного с newTypeId уже есть у животного с animalId. Животное с animalId уже имеет типы с oldTypeId и newTypeId - 409
-    if (mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animal_types` WHERE `id_animal` = '$animalId' AND `id_type` = '$oldTypeId'")) !== 0
-    || mysqli_num_rows(mysqli_query($connect, "SELECT `id` FROM `animal_types` WHERE `id_animal` = '$animalId' AND `id_type` = '$newTypeId'")) !== 0){
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT `id_animal` FROM `animal_types` WHERE `id_animal` = '$animalId' AND `id_type` = '$oldTypeId'")) !== 0
+    || mysqli_num_rows(mysqli_query($connect, "SELECT `id_animal` FROM `animal_types` WHERE `id_animal` = '$animalId' AND `id_type` = '$newTypeId'")) !== 0){
         giveError(409, "Animal is has this type");
         return;
     }
@@ -387,15 +395,15 @@ function getAnimalsType($connect, $animal){
 
 //проверка поля gender
 function validGender($gender){
-    if (is_null($gender)) return false;
-    if (strcmp($gender, "MALE") == 0 || strcmp($gender, "FEMALE") == 0 || strcmp($gender, "OTHER") == 0) return false;
-    return true;
+    if (is_null($gender)) return true;
+    if (strcmp($gender, "MALE") == 0 || strcmp($gender, "FEMALE") == 0 || strcmp($gender, "OTHER") == 0) return true;
+    return false;
 }
 
 
 //проверка поля lifestatus
 function validLifestatus($lifestatus){
-    if (is_null($lifestatus)) return false;
-    if (strcmp($lifestatus, "ALIVE") == 0 || strcmp($lifestatus, "DEAD") == 0) return false;
-    return true;
+    if (is_null($lifestatus)) return true;
+    if (strcmp($lifestatus, "ALIVE") == 0 || strcmp($lifestatus, "DEAD") == 0) return true;
+    return false;
 }

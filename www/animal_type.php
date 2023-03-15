@@ -102,7 +102,7 @@ function updateAnimalType($connect, $id){
     }
 
     //Тип животного с таким typeId не найден - 404
-    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `types` WHERE `id` = '$id'")) !== 1){
+    if (mysqli_num_rows(mysqli_query($connect, "SELECT * FROM `types` WHERE `id` = $id")) !== 1){
         giveError(404, "Animals type not found");
         return;
     }
@@ -113,7 +113,7 @@ function updateAnimalType($connect, $id){
         return;
     }
 
-    mysqli_query($connect, "UPDATE `types` SET `type` = '$type' WHERE `id` = '$id'");
+    mysqli_query($connect, "UPDATE `types` SET `type` = '$type' WHERE `id` = $id");
     echo json_encode([
         "id" => $id,
         "type" => $type

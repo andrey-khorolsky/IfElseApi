@@ -205,6 +205,11 @@ function updateAccount($connect, $id){
         return;
     }
 
+    $firstName = mysqli_real_escape_string($connect, $firstName);
+    $lastName = mysqli_real_escape_string($connect, $lastName);
+    $email = mysqli_real_escape_string($connect, $email);
+    $password = mysqli_real_escape_string($connect, $password);
+
     mysqli_query($connect, "UPDATE `accounts` SET `firstName` = '$firstName', `lastName` = '$lastName', `email` = '$email', `password` = '$password' WHERE `id` = '$id'");
 
     echo json_encode([
